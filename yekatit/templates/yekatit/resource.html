@@ -1,0 +1,110 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/moreservices.css' %}" />
+    <section class="page-title bg-1 custom-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <h1 class="text-capitalize mb-5 text-lg">Resource</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% for resource in content_list %}
+        {% if resource.title ==  'Strategic Plan' %}
+            <section >
+                <div class="MServices-header">
+                <h1 id="chooseServicesHeader">Find <span>the Strategic Plan Document below</span></h1>
+                </div>
+            </section>
+            <section class="More-services">
+                <div class="Mainservices-container">
+                    <div class="server-grid" id="serverGrid"></div>
+                    <div class="services-container" id="servicesContainer"></div>
+                </div>
+            </section>
+            <script>
+                var staticFilePath = "{% static 'assets/images/bordclicnic-removebg-preview.png' %}"
+                var staticPDFstrategicPlan = "{% static 'assets/research/Executive Summary for Strategic plan.pdf' %}"
+            </script>
+            <script src="{% static 'js/strategic-plan.js' %}"></script>
+        {% endif %}
+
+        {% if resource.title ==  'Manual And Guidelines' %}
+            <section >
+                <div class="MServices-header">
+                <h1 id="chooseServicesHeader">CHOOSE <span>from the Manual Guidelines Documents</span></h1>
+                </div>
+            </section>
+            <section class="More-services">
+                <div class="Mainservices-container">
+                <div class="server-grid" id="serverGrid"></div>
+                <div class="services-container" id="servicesContainer"></div>
+                </div>
+            </section>
+            <script>
+                var staticFilePath = "{% static 'assets/images/bordclicnic-removebg-preview.png' %}"
+                var staticPDFmanual = "{% static 'assets/research/Y12HMC RP Guidline.pdf' %}"
+                var staticPDFeducation = "{% static 'assets/research/Educational program  guideline.pdf' %}"
+                var staticPDFcommunity = "{% static 'assets/research/Community service  and engagement guideline.pdf' %}"
+                var staticPDFacademic = "{% static 'assets/research/Academic staff handbook.pdf' %}"
+            </script>
+            <script src="{% static 'js/manual-Guildlines.js' %}"></script>
+        {% endif %}
+
+        {% if resource.title ==  'Research' %}
+            <section >
+                <div class="MServices-header">
+                <h1 id="chooseServicesHeader">Select <span>a RESEARCH</span></h1>
+                </div>
+            </section>
+            <section class="More-services">
+                <div class="Mainservices-container">
+                <div class="server-grid" id="serverGrid"></div>
+                <div class="services-container" id="servicesContainer"></div>
+                </div>
+            </section>
+            <!-- <a href="{{ pdf_viewer.pdf.url }}" target="_blank">{{ pdf_viewer.name }}</a> -->
+            <script>
+                var staticFilePath = "{% static 'assets/images/bordclicnic-removebg-preview.png' %}"
+                var staticFilePath1 = "{% static 'asset/assets/icons/cardio.png' %}"
+                var staticFilePath2 = "{% static 'assets/images/OPD-removebg-preview.png' %}"
+                var PublicationsPDF = "{% static 'assets/research/Cervical_Cancer_Screening_published.pdf' %}"
+                var ResearchPolicy = "{% static 'assets/research/Y12HMC RP Guidline.pdf' %}"
+
+            </script>
+            <script src="{% static 'js/research.js' %}"></script>
+    {% endif %}
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+      <script src="{% static 'plugins/jquery/jquery.js' %}"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="{% static 'plugins/bootstrap/js/popper.js' %}"></script>
+      <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'plugins/counterup/jquery.easing.js' %}"></script>
+      <!-- Slick Slider -->
+      <script src="{% static 'plugins/slick-carousel/slick/slick.min.js' %}"></script>
+      <!-- Counterup -->
+      <script src="{% static 'plugins/counterup/jquery.waypoints.min.js' %}"></script>
+  
+      <script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+      <script src="{% static 'plugins/counterup/jquery.counterup.min.js' %}"></script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

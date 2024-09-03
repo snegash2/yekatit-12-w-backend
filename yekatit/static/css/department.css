@@ -1,0 +1,96 @@
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease,
+    border-color 0.3s ease; /* Add smooth transition for scaling, box-shadow, padding, and border-color */
+  border: 4px solid transparent; /* Add transparent border to reserve space for the shadow */
+  height: 39rem;
+}
+
+.hover-card img.img-fluid.w-100 {
+  height: 13rem;
+  width: 21rem;
+}
+.hover-card:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Scale up slightly on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+  border-color: transparent; /* Set border color to transparent on hover to prevent layout shifts */
+}
+/* Additional CSS for the "Learn More" link */
+.read-more {
+  margin-bottom: 2rem;
+  margin-left: 0.5rem;
+  color: #333;
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Make the text bold */
+  padding: 5px 10px; /* Add padding for better clickability */
+  border: 2px solid #214213; /* Add border for button-like appearance */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+  display: inline-block; /* Ensure inline-block display to apply padding and border */
+}
+.hover-card p {
+  padding: 9px;
+}
+
+.read-more:hover {
+  color: #fff; /* Change text color on hover */
+  background-color: #214213; /* Change background color on hover */
+  border-color: #214213; /* Change border color on hover */
+  transform: translateY(-3px); /* Move the button slightly up on hover */
+}
+
+.third {
+  margin-top: 4rem;
+}
+#row {
+  margin-right: -23px;
+  margin-left: -32px;
+  margin-top: 0rem;
+}
+.col-md-6 {
+  margin-top: 4rem;
+}
+@media (max-width: 780px) {
+  #row {
+    margin-right: 1px;
+    margin-left: -1px;
+    margin-top: 0rem;
+  }
+}
+#Text-one {
+  color: white;
+}
+.doctor {
+  display: inline-block;
+  width: 100%; /* Each column takes 30% width */
+  margin: 0 1%; /* Add space between columns */
+  text-align: center;
+}
+
+.doctor i {
+  font-size: 48px;
+}
+
+/* Style for the doctor info */
+.doctor-info {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.fas {
+  color: #4c952d;
+}
+.deps-header {
+  margin-top: -8rem;
+}
+/*  */
+.list-para {
+  font-size: 19px;
+  font-weight: 500;
+}
+.testimonial-card h3 {
+  font-size: 1.3rem;
+}
+.testimonial-card p {
+  margin-bottom: 0rem;
+  font-weight: 600;
+}

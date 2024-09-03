@@ -1,0 +1,12 @@
+.swiper-slide {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.text-lg {
+  color: white;
+}

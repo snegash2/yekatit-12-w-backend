@@ -1,0 +1,221 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/newsdetail.css' %}">
+
+    <section class="page-title bg-1 custom-page-title">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block text-center">
+              <h1 class="text-capitalize mb-5 text-lg">News</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="news-detail-container">
+      <div class="news-content">
+        <div class="news-header">
+          <h1 class="news-title">{{ news.name }}</h1>
+          <p class="news-date">{{ news.published_date|date:"jS F, Y" }}</p>
+          <img
+            src="{{ news.image.url }}"
+            alt="News Image"
+            class="news-image"
+          />
+        </div>
+        {% for paragraph in news.description|split_paragraphs %}
+          <p class="news-description">{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+  
+      <div class="sidebar">
+        <!-- Main Search Bar -->
+        <div class="search-bar">
+          <input
+            type="text"
+            id="mainSearchInput"
+            placeholder="Search all content..."
+          />
+          <button onclick="performSearch()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M10 2a8 8 0 015.293 13.707l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-intro">
+          <p>
+            Welcome to our news section! Explore related categories and discover
+             more articles related to this topic. Welcome to our news section! 
+             Explore related categories and discover more articles related to this topic.
+          </p>
+        </div>
+        <div class="related-news">
+          <h2>Other News</h2>
+          
+          <div class="related-news-grid" id="sidebarNewsContainer">
+            {% for news in other_news %} 
+            <a href="{% url 'news_detail' news.slug %}" class="related-news-card">
+              <div class="related-news-card-image">
+              </div>
+              <div class="related-news-card-content">
+                <h3 class="related-news-card-title">
+                  <hr class="news-hr">
+                  {{ news.name }}
+                </h3>
+                <p class="related-news-card-description">
+                  {{ news.description|truncatechars:100 }}
+                </p>
+                <p class="related-news-card-date">{{ news.published_date }}</p>
+              </div>
+            </a>
+
+            {% endfor %}
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Attach event listener for search input
+        document.getElementById("mainSearchInput").addEventListener("input", performSearch);
+
+        // Fetch default news when the page loads
+        fetchDefaultNews();
+    });
+
+    function performSearch() {
+        const query = document.getElementById("mainSearchInput").value.toLowerCase();
+        const currentNewsSlug = '{{ news.slug }}';  // Get the current news slug
+
+        if (query === "") {
+            // If the query is empty, show the default news
+            fetchDefaultNews();
+        } else {
+            // Otherwise, perform a search with the given query
+            fetch(`/search-news/?q=${encodeURIComponent(query)}&current_news_slug=${encodeURIComponent(currentNewsSlug)}`)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log("Received data:", data);  // Log response data
+                    updateSidebarResults(data.results, query);
+                })
+                .catch((error) => console.error("Error fetching search results:", error));
+        }
+    }
+
+    function fetchDefaultNews() {
+        const currentNewsSlug = '{{ news.slug }}';  // Get the current news slug
+        fetch(`/search-news/?current_news_slug=${encodeURIComponent(currentNewsSlug)}`)
+            .then(response => response.json())
+            .then(data => updateSidebarResults(data.results, ''))
+            .catch(error => console.error("Error fetching default news:", error));
+    }
+
+    function updateSidebarResults(results, query) {
+        const sidebarContainer = document.getElementById("sidebarNewsContainer");
+        sidebarContainer.innerHTML = "";
+
+        if (results.length === 0) {
+            sidebarContainer.innerHTML = "<p>No results found.</p>";
+            return;
+        }
+
+        results.forEach((news) => {
+            const card = document.createElement("div");
+            card.className = "related-news-card";
+            card.innerHTML = `
+                <a href="/news/${news.slug}/" class="related-news-card-link">
+                    <div class="related-news-card-content">
+                        <h3 class="related-news-card-title">${highlightText(news.name, query)}</h3>
+                        <p class="related-news-card-description">${truncateAndHighlight(news.description, query, 100)}</p>
+                        <p class="related-news-card-date">${news.published_date}</p>
+                    </div>
+                </a>
+            `;
+            sidebarContainer.appendChild(card);
+        });
+    }
+
+    function highlightText(text, query) {
+        if (!query) {
+            // Return the original text if query is empty to avoid extra styling
+            return text;
+        }
+        const regex = new RegExp(`(${query})`, "gi");
+        return text.replace(regex, '<mark class="highlight">$1</mark>');
+    }
+
+    function truncateText(text, maxLength) {
+        // Truncate text to a specified length
+        return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+    }
+
+    function truncateAndHighlight(text, query, maxLength) {
+        // If no query is present, truncate without highlighting
+        if (!query) {
+            return truncateText(text, maxLength);
+        }
+
+        // Split text into words for processing
+        const words = text.split(' ');
+
+        // Build the truncated text with highlighting
+        let truncatedText = '';
+        let length = 0;
+
+        for (let i = 0; i < words.length; i++) {
+            const word = words[i];
+            const wordLength = word.length;
+
+            // Stop adding words if the maxLength is reached
+            if (length + wordLength > maxLength) {
+                truncatedText += '...';
+                break;
+            }
+
+            // Highlight words containing the query
+            if (word.toLowerCase().includes(query.toLowerCase())) {
+                truncatedText += `<mark class="highlight">${word}</mark> `;
+            } else {
+                truncatedText += `${word} `;
+            }
+
+            length += wordLength + 1; // Include space
+        }
+
+        return truncatedText.trim();
+    }
+</script>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'script.js' %}"></script>
+
+      <!-- Add Swiper JS -->
+
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

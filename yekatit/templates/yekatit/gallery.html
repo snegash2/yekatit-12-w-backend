@@ -1,0 +1,132 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/galler.css' %}">
+
+    <section class="page-title bg-1">
+		<div class="overlay"></div>
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12">
+			  <div class="block text-center">
+				<span class="text-white">Our Gallery collection</span>
+				<h1 class="text-capitalize mb-5 text-lg">Yekatit-12 Hospital Medical College</h1>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+    <section>
+        <div class="gallery">
+          
+            <div class="category" id="category1">
+              {% for category in categories %}
+                <div id="Misson-section" class="section-title text-center">
+                  <br><br>
+                      <h3 class="mb-4">{{ category.name }}</h3>
+                      <div class="divider mx-auto my-4"></div>
+                  </div>
+
+                <div class="photos">
+                  {% for gallery in galleries %}
+                    {% if gallery.category == category %}
+                      <img src="{{ gallery.image.url }}" alt="Image 1" />
+                    {% endif %}
+                  {%endfor %}
+                </div>
+              {%endfor %}
+            </div>
+          </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+      <div id="caption" class="caption"></div>
+    </div>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const images = document.querySelectorAll(".photos img");
+        let currentIndex = 0;
+  
+        // Function to show the modal with the clicked image
+        function showModal(index) {
+          modal.style.display = "block";
+          modalImg.src = images[index].src;
+          currentIndex = index;
+        }
+  
+        // Event listener for clicking on images
+        images.forEach(function (img, index) {
+          img.addEventListener("click", function () {
+            showModal(index);
+            // Show the next hidden image
+            const nextImage = images[currentIndex + 1];
+            if (nextImage && nextImage.classList.contains("hidden")) {
+              nextImage.classList.remove("hidden");
+            }
+          });
+        });
+  
+        // Event listener for previous button
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "❮ Previous";
+        prevBtn.classList.add("prev");
+        modal.appendChild(prevBtn);
+        prevBtn.addEventListener("click", function () {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          modalImg.src = images[currentIndex].src;
+        });
+  
+        // Event listener for next button
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = "Next ❯";
+        nextBtn.classList.add("next");
+        modal.appendChild(nextBtn);
+        nextBtn.addEventListener("click", function () {
+          currentIndex = (currentIndex + 1) % images.length;
+          modalImg.src = images[currentIndex].src;
+        });
+  
+        // Close the modal when clicking on the close button
+        const closeBtn = document.querySelector(".close");
+        closeBtn.addEventListener("click", function () {
+          modal.style.display = "none";
+        });
+  
+        // Close the modal when clicking outside the modal
+        window.addEventListener("click", function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+    // Event listener for keyboard navigation
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft') {
+      // Simulate click on previous button
+      const prevButton = document.querySelector('.prev');
+      prevButton.click();
+    } else if (event.key === 'ArrowRight') {
+      // Simulate click on next button
+      const nextButton = document.querySelector('.next');
+      nextButton.click();
+    }
+  });
+  
+    </script>
+
+          <!-- Add Swiper JS -->
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          <script src="{% static 'script.js' %}"></script>
+{% endblock content %}

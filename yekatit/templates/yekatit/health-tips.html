@@ -1,0 +1,98 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/health-tips.css' %}">
+
+    <section class="page-title bg-1">
+		<div class="overlay"></div>
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12">
+			  <div class="block text-center">
+				<span class="text-white">Yekatit-12 Hospital Medical College</span>
+				<h1 class="text-capitalize mb-5 text-lg">Health tips collection</h1>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center">
+          <div class="section-title">
+            <br><br><br>
+            <h2>Health tips video</h2>
+            <p>
+                Welcome to our Health Tips video page, where Yekatit 12 Hospital Medical College shares expert advice and practical insights to help you lead a healthier life. Our curated collection of videos covers a wide range of topics, from nutrition and exercise to mental well-being and preventive care, all delivered by our experienced medical professionals. Explore our videos to gain valuable knowledge that empowers you to make informed decisions about your health and wellness.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <div class="video-gallery">
+        <!-- Video 1 -->
+        <div class="video-thumbnail" data-video-id="crfmq5Uxedw">
+            <img src="https://img.youtube.com/vi/crfmq5Uxedw/hqdefault.jpg" alt="Video 1 Thumbnail">
+            <h3>Heart Attack</h3>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video-thumbnail" data-video-id="wDIArtaq1WQ">
+            <img src="https://img.youtube.com/vi/wDIArtaq1WQ/hqdefault.jpg" alt="Video 2 Thumbnail">
+            <h3>Arthritis</h3>
+        </div>
+        <!-- Video 3 -->
+        <div class="video-thumbnail" data-video-id="YmcpJ1Qtv6s">
+            <img src="https://img.youtube.com/vi/YmcpJ1Qtv6s/hqdefault.jpg" alt="Video 3 Thumbnail">
+            <h3>Salivary Gland</h3>
+        </div>
+        <!-- Video 4 -->
+        <div class="video-thumbnail" data-video-id="f0W4f2UdhFY">
+            <img src="https://img.youtube.com/vi/f0W4f2UdhFY/hqdefault.jpg" alt="Video 4 Thumbnail">
+            <h3>What is TB</h3>
+        </div>
+        <!-- Video 5 -->
+        <div class="video-thumbnail" data-video-id="RbFGfoPQVek">
+            <img src="https://img.youtube.com/vi/RbFGfoPQVek/hqdefault.jpg" alt="Video 5 Thumbnail">
+            <h3>Fistula</h3>
+        </div>
+        <!-- Video 6 -->
+        <div class="video-thumbnail" data-video-id="Sci7MZ3cyE4">
+            <img src="https://img.youtube.com/vi/Sci7MZ3cyE4/hqdefault.jpg" alt="Video 6 Thumbnail">
+            <h3>Blood clots</h3>
+        </div>
+        <!-- Video 7 -->
+        <div class="video-thumbnail" data-video-id="AZYZ06pUPZM">
+            <img src="https://img.youtube.com/vi/AZYZ06pUPZM/hqdefault.jpg" alt="Video 7 Thumbnail">
+            <h3>Migraine</h3>
+        </div>
+        <!-- Video 8 -->
+        <div class="video-thumbnail" data-video-id="hK3MNh3qR5A">
+            <img src="https://img.youtube.com/vi/hK3MNh3qR5A/hqdefault.jpg" alt="Video 8 Thumbnail">
+            <h3>Cleft Lip</h3>
+        </div>
+        <!-- Add more video thumbnails here -->
+    </div>
+
+    <!-- Modal for YouTube Video -->
+    <div id="videoModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/health-tips.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+    
+{% endblock content %}

@@ -1,0 +1,71 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/announcement.css' %}">
+    <!-- Add these lines to include Swiper.js -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/override.css' %}" />
+
+      <!-- Main body  -->
+      <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <span class="text-white">Announcement</span>
+                <h1 class="text-capitalize mb-5 text-lg">Yekatit-12 Hospital Medical College</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelector(".announcement").style.opacity = "1";
+        });
+      </script>
+
+        <!-- ==================================================================== -->
+        <div id="Misson-section" class="section-title text-center">
+          <h2 class="mb-4">Announcement</h2>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+<!--============ start container================== -->
+        <div class="news-container">
+          {% for content in content_list %}
+              {% for announcement in content.announcement.all %}
+                <div class="news-card">
+                    <h3 class="news-title">{{ announcement.name }}</h3>
+                    <!-- <img class src="{{ news.image.url }}" width="200" height="200"> -->
+                    <p class="news-date">{{ announcement.published_date }}</p>
+                    <p class="news-description">{{ announcement.description|truncatechars:130 }}</p>
+                    <a href="{% url 'announcement_detail' announcement.slug %}">Read More</a>
+                </div>
+              {% endfor %}
+          {% endfor %}  
+        </div>
+        <!-- ============ end container============================== -->
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+
+{% endblock content %}

@@ -1,0 +1,1000 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+
+    <section class="page-title bg-1 custom-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <h1 class="text-capitalize mb-5 text-lg">Residency Program</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% for department in content_list %}
+        {% if department.title ==  'Internal Medicine' %}
+            <section class="section department-single">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Internal Medicine Residency Program at Yekatit 12 Hospital Medical College. 
+                        Our program is dedicated to providing comprehensive and rigorous training to aspiring 
+                        physicians in the field of internal medicine. We strive to produce competent and 
+                        compassionate internists who are equipped with the knowledge and skills necessary 
+                        to deliver high-quality patient care.
+                      </p>
+                      <p>
+                        <strong>Program Overview</strong>: Our residency program is designed to provide a well-rounded 
+                        educational experience that encompasses both clinical training and academic curriculum. 
+                        The program duration is typically three years, during which residents work closely with 
+                        experienced faculty members and gain hands-on experience in various aspects of internal 
+                        medicine.
+                      </p>
+                      <p>
+                        <strong>Clinical Training</strong>: Residents rotate through different medical subspecialties, 
+                        including cardiology, gastroenterology, pulmonology, nephrology, infectious diseases, 
+                        and more. These rotations take place in our state-of-the-art facilities, where 
+                        residents have the opportunity to encounter a diverse patient population and 
+                        manage a wide range of medical conditions. Under the guidance of our experienced 
+                        faculty, residents develop clinical expertise, refine their diagnostic and 
+                        therapeutic skills, and learn to provide comprehensive patient care.
+                      </p>
+                      <p>
+                        <strong>Research Opportunities</strong>: We believe in the importance of research in 
+                        advancing medical knowledge and improving patient care. Our residency program provides 
+                        residents with opportunities to engage in research projects under the mentorship of 
+                        faculty members. We support and encourage residents to present their research findings 
+                        at local and national conferences, fostering their professional development and contributing 
+                        to the advancement of medical science.
+                      </p>
+                      <p>
+                        <strong>Multidisciplinary Collaboration</strong>: We foster a collaborative environment where 
+                        residents work closely with other healthcare professionals, including specialists, nurses, and 
+                        allied health staff. Our program encourages interdisciplinary teamwork, ensuring a comprehensive 
+                        and holistic approach to patient care. Residents actively participate in interdisciplinary 
+                        rounds, tumor boards, and patient management meetings, gaining valuable insights into 
+                        collaborative healthcare delivery.
+                      </p>
+                      <p>
+                        <strong>Wellness and Support</strong>: We prioritize the well-being of our residents and 
+                        provide a supportive environment throughout their training. We offer mentorship, counseling 
+                        services, and wellness programs to promote work-life balance and resilience. We believe 
+                        that nurturing the personal and professional growth of our residents is essential in 
+                        preparing them for successful careers in internal medicine.
+                      </p>
+                      <p>
+                        <strong>Graduate Medical Education</strong>: Upon successful completion of our residency 
+                        program, residents are eligible to take the certification examination in internal medicine 
+                        and become board-certified internists. Our program also prepares residents for fellowship 
+                        training or for a career in primary care, hospital medicine, or academic medicine.
+                      </p>
+                      <p>
+                        We are proud of our Internal Medicine Residency Program at Yekatit 12 Hospital Medical 
+                        College and invite aspiring physicians to join us on this rewarding journey. Through 
+                        our comprehensive training, supportive environment, and commitment to excellence, we 
+                        aim to shape competent and compassionate internists who will make a positive impact 
+                        on patient care and the field of internal medicine.
+                      </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='residency-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Residency Program<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                        <img src="{% static 'images/academics/Internal-Medican/team.jpg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>8:30 am - 5:30 pm</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday - Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div> -->
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'General Surgery' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the General Surgery Residency Program at Yekatit 12 
+                        Hospital Medical College. Our program is dedicated to providing 
+                        comprehensive and rigorous training to aspiring surgeons, preparing 
+                        them for successful careers in the field of general surgery. We are 
+                        committed to delivering exceptional surgical education, research 
+                        opportunities, and patient care experiences.
+                      </p>
+                      <p>
+                        <strong>Program Overview</strong>: Our residency program offers a dynamic 
+                        and immersive learning environment designed to develop well-rounded surgeons. 
+                        The program typically spans four years, during which residents gain extensive 
+                        hands-on experience, acquire in-depth surgical knowledge, and refine their 
+                        technical skills under the guidance of experienced faculty members.
+                      </p>
+                      <p>
+                        <strong>Clinical Training</strong>: Our residents rotate through various surgical 
+                        subspecialties, including gastrointestinal surgery, trauma surgery, endocrine 
+                        surgery, vascular surgery, pediatric surgery, and more. These rotations take 
+                        place in our modern surgical facilities, providing residents with exposure 
+                        to a diverse range of surgical cases. Residents actively participate in 
+                        surgical procedures, patient evaluations, and postoperative care, honing 
+                        their clinical skills and surgical decision-making abilities.
+                      </p>
+                      <p>
+                        <strong>Research Opportunities</strong>: We believe in the importance of 
+                        research and innovation in advancing surgical knowledge and patient care. 
+                        Our residency program provides residents with opportunities to participate 
+                        in research projects, collaborate with faculty members, and present their 
+                        findings at national and international conferences. We encourage residents 
+                        to develop critical thinking skills, engage in scholarly activities, and 
+                        contribute to the advancement of surgical science.
+                      </p>
+                      <p>
+                        <strong>Multidisciplinary Collaboration</strong>: We emphasize the significance 
+                        of interdisciplinary collaboration in delivering comprehensive patient care. 
+                        Our residents work closely with other healthcare professionals, including 
+                        specialists, nurses, anesthesiologists, and radiologists, to provide integrated 
+                        and patient-centered treatment. Residents actively participate in multidisciplinary 
+                        rounds, tumor boards, and care coordination meetings, fostering effective teamwork 
+                        and communication skills.
+                      </p>
+                      <p>
+                        <strong>Wellness and Support</strong>: We prioritize the well-being of our residents 
+                        and provide a supportive environment throughout their training. We offer 
+                        mentorship, counseling services, and wellness programs to promote work-life 
+                        balance and resilience. We believe that supporting the personal and professional 
+                        development of our residents is crucial for their long-term success in the field 
+                        of surgery.
+                      </p>
+                      <p>
+                        <strong>Certification and Career Pathways</strong>: Upon successful completion of 
+                        our residency program, residents are eligible to sit for the certification 
+                        examination in general surgery. Graduates of our program have pursued diverse 
+                        career paths, including private practice, academic medicine, and fellowship 
+                        training in subspecialties such as surgical oncology, minimally invasive surgery, 
+                        and trauma surgery.
+                      </p>
+                      <p>
+                        We are proud of our General Surgery Residency Program at Yekatit 12 Hospital Medical 
+                        College and invite aspiring surgeons to join us on this fulfilling journey. Through 
+                        our comprehensive training, dedicated faculty, and commitment to excellence, we aim 
+                        to shape skilled and compassionate surgeons who will make a positive impact on 
+                        patient care and the field of general surgery.
+                      </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='residency-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Residency Program<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                        <img src="{% static '/images/academics/surgery/surgery.jpg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Monday - Friday</a>
+                      <span>8:30 am - 5:30 pm</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Saturday - Sunday</a>
+                      <span>Closed</span>
+                      </li>
+                  </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Pediatrics and Child Health' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Pediatrics and Child Health Residency Program at Yekatit 
+                        12 Hospital Medical College. Our program is dedicated to training aspiring 
+                        pediatricians to become skilled and compassionate healthcare providers for 
+                        infants, children, and adolescents. We offer a comprehensive and rigorous 
+                        training curriculum that prepares residents for successful careers in 
+                        pediatric medicine.
+                    </p>
+                    <p>
+                        <strong>Program Overview</strong>: Our residency program is designed to 
+                        provide residents with a well-rounded education in pediatrics and child health. 
+                        The program typically spans three years and combines clinical experiences, 
+                        didactic teachings, and research opportunities. Our goal is to produce 
+                        competent and confident pediatricians who are equipped to provide high-quality 
+                        care to children of all ages and backgrounds.
+                    </p>
+                    <p>
+                        <strong>Clinical Training</strong>: Residents rotate through various pediatric 
+                        subspecialties and clinical settings, including general pediatrics, neonatology, 
+                        pediatric cardiology, pediatric gastroenterology, pediatric neurology, and more. 
+                        These rotations take place in our modern and well-equipped facilities, providing 
+                        residents with diverse exposure to a wide range of pediatric conditions. Under 
+                        the guidance of experienced faculty members, residents develop clinical expertise, 
+                        refine their diagnostic skills, and learn evidence-based treatment approaches.
+                    </p>
+                    <p>
+                        <strong>Didactic Curriculum</strong>: Our residency program offers a comprehensive 
+                        didactic curriculum that covers key topics in pediatrics and child health. 
+                        Residents participate in regular conferences, lectures, case discussions, 
+                        journal clubs, and grand rounds. These educational sessions cover areas 
+                        such as growth and development, pediatric emergencies, pediatric pharmacology, 
+                        immunizations, adolescent medicine, and preventive care. Our program emphasizes 
+                        the importance of lifelong learning and staying up-to-date with the latest 
+                        advancements in pediatric medicine.
+                    </p>
+                    <p>
+                        <strong>Research Opportunities</strong>: We believe in the value of research in 
+                        advancing pediatric healthcare. Our residency program provides residents with 
+                        opportunities to engage in research projects under the guidance of faculty mentors. 
+                        We encourage residents to develop critical thinking skills, participate in 
+                        scholarly activities, and present their research findings at local and national 
+                        conferences. Our goal is to foster an environment of inquiry and innovation, 
+                        contributing to the advancement of pediatric medicine.
+                    </p>
+                    <p>
+                        <strong>Multidisciplinary Collaboration</strong>: We recognize the importance of 
+                        interdisciplinary collaboration in providing comprehensive care for children. 
+                        Our residents work closely with other healthcare professionals, including nurses, 
+                        specialists, psychologists, therapists, and social workers. We encourage 
+                        interdisciplinary rounds, case discussions, and collaborative decision-making 
+                        to ensure holistic and patient-centered care.
+                    </p>
+                    <p>
+                        <strong>Community Engagement</strong>: Our program emphasizes community engagement 
+                        and advocacy for child health. We encourage residents to participate in community 
+                        outreach programs, health screenings, and education initiatives. By actively 
+                        engaging with the community, our residents gain a deeper understanding of the 
+                        social determinants of health and develop skills to address health disparities 
+                        and promote child well-being.
+                    </p>
+                    <p>
+                        <strong>Wellness and Support</strong>: We prioritize the well-being and professional 
+                        development of our residents. We provide a supportive and nurturing environment that 
+                        promotes work-life balance, self-care, and resilience. Our program offers mentorship, 
+                        counseling services, and wellness programs to support residents throughout their training.
+                    </p>
+                    <p>
+                        <strong>Certification and Career Pathways</strong>: Upon successful completion of our residency 
+                        program, residents are eligible to take the certification examination in pediatrics and become 
+                        board-certified pediatricians. Graduates of our program have pursued various career pathways, 
+                        including general pediatrics in private practice or academic settings, subspecialty fellowships, 
+                        and research positions.
+                    </p>
+                    <p>
+                        We are proud of our Pediatrics and Child Health Residency Program at Yekatit 12 Hospital Medical 
+                        College. We invite dedicated and compassionate individuals to join us on this rewarding journey 
+                        of becoming skilled pediatricians who will make a positive impact on the well-being of children 
+                        and their families.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='residency-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Residency Program<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                        <img src="{% static '/images/academics/pediatrics/pediatrics2.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Monday - Friday</a>
+                      <span>8:30 am - 5:30 pm</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Saturday - Sunday</a>
+                      <span>Closed</span>
+                      </li>
+                    </ul>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Obstetrics and Gynecology' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Obstetrics and Gynecology (OB/GYN) Residency Program at Yekatit 12 Hospital Medical College. Our program is committed to training exceptional OB/GYN physicians who will provide comprehensive and compassionate care to women throughout their reproductive lives. We offer a comprehensive training curriculum that combines clinical experiences, surgical skills development, research opportunities, and a commitment to women's health advocacy.
+                      </p>
+                      <p> 
+                        <strong>Program Overview</strong>: Our OB/GYN residency program is designed to provide residents with a strong foundation in general obstetrics and gynecology, as well as exposure to various subspecialties within the field. The program typically spans four years, during which residents gain extensive clinical experience, develop surgical proficiency, engage in scholarly activities, and refine their patient care skills.
+                      </p>
+                      <p>
+                        <strong>Clinical Training</strong>: Residents rotate through a variety of clinical settings, including labor and delivery, gynecologic surgery, high-risk obstetrics, reproductive endocrinology, gynecologic oncology, urogynecology, and family planning. These rotations take place in our state-of-the-art facilities, equipped with the latest medical technologies. Residents actively participate in patient management, surgical procedures, prenatal care, family planning services, and postoperative care under the guidance of experienced faculty members.
+                      </p>
+                      <p>
+                        <strong>Surgical Skills Development</strong>: We place a strong emphasis on surgical training and skill development. Our residents have the opportunity to participate in a wide range of surgical procedures, including minimally invasive surgeries, gynecologic oncology procedures, laparoscopic and robotic surgeries, and cesarean deliveries. Residents receive hands-on training, mentorship, and guidance from our skilled faculty, allowing them to develop expertise in surgical techniques and patient safety.
+                      </p>
+                      <p>
+                        <strong>Didactic Curriculum</strong>: Our residency program offers a comprehensive didactic curriculum that covers core topics in obstetrics and gynecology. Residents participate in regular conferences, lectures, case discussions, journal clubs, and multidisciplinary meetings. These educational sessions cover areas such as prenatal care, gynecologic disorders, reproductive endocrinology, infertility, contraception, menopause management, and women's health issues. We encourage residents to actively engage in academic discussions, stay up-to-date with the latest research, and enhance their understanding of evidence-based practices.
+                      </p>
+                      <p>
+                        <strong>Research Opportunities</strong>: We believe in the importance of research and innovation in advancing women's health. Our residency program provides residents with opportunities to engage in research projects and scholarly activities. We encourage residents to collaborate with faculty members, participate in clinical trials, present their research findings at national conferences, and contribute to the medical literature. Our goal is to foster a culture of inquiry and critical thinking, leading to advancements in the field of OB/GYN.
+                      </p>
+                      <p>
+                        <strong>Women's Health Advocacy</strong>: We are dedicated to promoting women's health and advocating for the needs of our patients. Our residents are encouraged to engage in community outreach programs, health education initiatives, and women's health advocacy efforts. We strive to address health disparities, promote reproductive justice, and improve access to comprehensive healthcare services for women of all backgrounds.
+                      </p>
+                      <p>
+                        <strong>Wellness and Support</strong>: We prioritize the well-being and professional development of our residents. We provide a supportive and nurturing environment that promotes work-life balance, self-care, and resilience. Our program offers mentorship, counseling services, and wellness programs to support residents throughout their training.
+                      </p>
+                      <p>
+                        <strong>Certification and Career Pathways</strong>: Upon successful completion of our residency program, residents are eligible to take the certification examination in obstetrics and gynecology and become board-certified OB/GYN physicians. Graduates of our program have pursued various career pathways, including private practice, academic medicine, subspecialty fellowships, and women's health advocacy roles.
+                      </p>
+                      <p>
+                        We are proud of our Obstetrics and Gynecology Residency Program at Yekatit 12 Hospital Medical College. We invite dedicated and compassionate individuals to join us on this fulfilling journey of becoming skilled OB/GYN physicians committed to providing excellent care to women throughout their lives.
+                      </p>
+                      <h3 class="mt-5 mb-4">Organization Chart</h3>
+                      <div class="divider my-4"></div>
+                      <div class="department-img">
+                        <img src="{% static 'images/academics/obgyn/obgyn-org-chart.png' %}" alt="" class="img-fluid" />
+                      </div>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='residency-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Residency Program<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                        <img src="{% static '/images/academics/obgyn/obgyn.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Monday - Friday</a>
+                      <span>8:30 am - 5:30 pm</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Saturday - Sunday</a>
+                      <span>Closed</span>
+                      </li>
+                    </ul>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Anesthesia and critical care' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Anesthesia and Critical Care Residency Program at Yekatit 12 Hospital Medical College. Our program is dedicated to training highly skilled and compassionate physicians in the specialized fields of anesthesia and critical care medicine. We offer a comprehensive and rigorous training curriculum that prepares residents to provide exceptional care to patients undergoing surgery and those requiring critical care interventions.
+                      </p>
+                      <p>
+                        <strong>Program Overview</strong>: Our residency program provides residents with a well-rounded education in anesthesia and critical care. The program typically spans three years, during which residents gain extensive clinical experience, develop expertise in perioperative care, and acquire proficiency in the management of critically ill patients. Our goal is to produce competent and confident anesthesiologists capable of delivering safe and effective anesthesia services and providing optimal care to critically ill patients.
+                      </p>
+                      <p>
+                        <strong>Clinical Training</strong>: Residents rotate through various clinical settings, including operating rooms, intensive care units, and pain management clinics. Under the guidance of experienced faculty members, residents actively participate in the perioperative management of patients, including preoperative assessment, anesthesia administration, intraoperative monitoring, and postoperative care. In critical care settings, residents develop skills in managing patients with complex medical conditions, multi-organ failure, and life-threatening emergencies.
+                      </p>
+                      <p>
+                        <strong>Didactic Curriculum</strong>: Our residency program offers a comprehensive didactic curriculum that covers key topics in anesthesia and critical care medicine. Residents participate in regular conferences, lectures, case discussions, journal clubs, and multidisciplinary meetings. These educational sessions cover areas such as pharmacology, physiology, anesthesia techniques, pain management, resuscitation, ventilator management, and advanced life support. Our program emphasizes evidence-based practice and provides residents with the knowledge and skills necessary to make informed clinical decisions.
+                      </p>
+                      <p>
+                        <strong>Surgical Specialties</strong>: Our residents have the opportunity to work alongside surgeons from various specialties, including orthopedics, general surgery, neurosurgery, cardiovascular surgery, and more. This exposure allows residents to gain expertise in providing specialized anesthesia care for a wide range of surgical procedures. Residents collaborate with surgical teams to ensure patient safety, optimize pain management, and manage intraoperative complications.
+                      </p>
+                      <p>
+                        <strong>Critical Care Training</strong>: Our program provides comprehensive training in critical care medicine, equipping residents with the skills to manage critically ill patients. Residents gain experience in the management of sepsis, acute respiratory distress syndrome, hemodynamic instability, and other critical conditions. They acquire proficiency in advanced life support techniques, invasive monitoring, mechanical ventilation, and the use of advanced technologies in critical care settings.
+                      </p>
+                      <p>
+                        <strong>Research and Scholarly Activities</strong>: We encourage residents to engage in research and scholarly activities throughout their training. Our program provides opportunities to participate in clinical research projects, quality improvement initiatives, and academic collaborations. Residents have access to research mentors and resources to develop critical thinking skills and contribute to advancements in the field of anesthesia and critical care medicine.
+                      </p>
+                      <p>
+                        <strong>Multidisciplinary Collaboration</strong>: We recognize the importance of interdisciplinary collaboration in providing comprehensive care to patients. Our residents work closely with surgeons, nurses, respiratory therapists, pharmacists, and other healthcare professionals to ensure coordinated and patient-centered care. We encourage multidisciplinary rounds, case discussions, and collaborative decision-making to optimize patient outcomes.
+                      </p>
+                      <p>
+                        <strong>Wellness and Support</strong>: We prioritize the well-being and professional development of our residents. We provide a supportive and nurturing environment that promotes work-life balance, self-care, and resilience. Our program offers mentorship, counseling services, and wellness programs to support residents throughout their training.
+                      </p>
+                      <p>
+                        <strong>Certification and Career Pathways</strong>: Upon successful completion of our residency program, residents are eligible to take the certification examination in anesthesiology and critical care medicine and become board-certified physicians. Graduates of our program have pursued various career pathways, including clinical practice, academic medicine, research positions, and leadership roles.
+                      </p>
+                      <p>
+                        We are proud of our Anesthesia and Critical Care Residency Program at Yekatit 12 Hospital Medical College. We invite dedicated and passionate individuals to join us on this rewarding journey of becoming skilled anesthesiologists and critical care specialists who provide exceptional care to patients undergoing surgery and those requiring critical care interventions.
+                      </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='residency-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Residency Program<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                        <img src="{% static '/images/academics/anesthesia/anesthesia.jpg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Monday - Friday</a>
+                      <span>8:30 am - 5:30 pm</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center">
+                      <a href="#">Saturday - Sunday</a>
+                      <span>Closed</span>
+                      </li>
+                    </ul>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Emergency and critical care' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Emergency and Critical Care Residency Program at Yekatit 12 Hospital Medical College. Our program is dedicated to training exceptional physicians in the fast-paced and demanding fields of emergency medicine and critical care. We offer a comprehensive and rigorous training curriculum that prepares residents to provide immediate and life-saving care to critically ill and injured patients.
+                      </p>
+                      <p>
+                        <strong>Program Overview</strong>: Our residency program provides residents with a comprehensive education in emergency medicine and critical care. The program typically spans three years, during which residents gain extensive clinical experience, develop expertise in acute care management, and acquire proficiency in handling emergencies. Our goal is to produce competent and compassionate physicians capable of delivering high-quality care in demanding and time-sensitive situations.
+                      </p>
+                      <p>
+                        <strong>Clinical Training</strong>: Residents rotate through various clinical settings, including the emergency department, intensive care units, and critical care wards. Under the guidance of experienced faculty members, residents actively participate in the evaluation, diagnosis, and management of patients presenting with a wide range of medical and traumatic emergencies. They develop skills in resuscitation, trauma management, advanced life support, and the use of critical care interventions.
+                      </p>
+                      <p>
+                        <strong>Didactic Curriculum</strong>: Our residency program offers a comprehensive didactic curriculum that covers key topics in emergency medicine and critical care. Residents participate in regular conferences, lectures, case discussions, journal clubs, and multidisciplinary meetings. These educational sessions cover areas such as emergency resuscitation, trauma care, toxicology, critical care procedures, advanced cardiac life support, and ultrasound in emergency medicine. Our program emphasizes evidence-based practice and equips residents with the knowledge and skills necessary to make timely and accurate clinical decisions.
+                      </p>
+                      <p>
+                        <strong>Emergency Procedures</strong>: We provide residents with hands-on training in a wide range of emergency procedures. Residents gain proficiency in airway management, central venous access, chest tube insertion, lumbar puncture, fracture reductions, and other essential procedures commonly performed in emergency and critical care settings. They receive guidance and mentorship from experienced faculty members to ensure competency and patient safety.
+                      </p>
+                      <p>
+                        <strong>Critical Care Training</strong>: Our program offers comprehensive training in critical care medicine, enabling residents to manage critically ill patients in the intensive care unit (ICU) and other critical care settings. Residents learn to manage complex medical conditions, multi-organ failure, sepsis, and other critical care emergencies. They gain expertise in invasive monitoring, mechanical ventilation, hemodynamic support, and advanced life support techniques.
+                      </p>
+                      <p>
+                        <strong>Trauma Care</strong>: Yekatit 12 Hospital Medical College is a recognized center for trauma care. Our residents receive specialized training in the evaluation, resuscitation, and management of trauma patients. They work closely with trauma surgeons, orthopedic surgeons, and other specialists to provide comprehensive and coordinated care to trauma victims. Residents gain experience in trauma resuscitation, advanced trauma life support, and the management of traumatic injuries.
+                      </p>
+                      <p>
+                        <strong>Research and Scholarly Activities</strong>: We encourage residents to engage in research and scholarly activities throughout their training. Our program provides opportunities to participate in clinical research projects, quality improvement initiatives, and academic collaborations. Residents have access to research mentors and resources to develop critical thinking skills and contribute to advancements in the field of emergency medicine and critical care.
+                      </p>
+                      <p>
+                        <strong>Multidisciplinary Collaboration</strong>: We recognize the importance of interdisciplinary collaboration in providing optimal care to patients. Our residents work closely with nurses, respiratory therapists, pharmacists, radiologists, and other healthcare professionals to ensure coordinated and patient-centered care. We encourage multidisciplinary rounds, case discussions, and collaborative decision-making to optimize patient outcomes.
+                      </p>
+                      <p>
+                        <strong>Wellness and Support</strong>: We prioritize the well-being and professional development of our residents. We provide a supportive and nurturing environment that promotes work-life balance, self-care, and resilience. Our program offers mentorship, counseling services, and wellness programs to support residents throughout their training.
+                      </p>
+                      <p>
+                        <strong>Certification and Career Pathways</strong>: Upon successful completion of our residency program, residents are eligible to take the certification examination in emergency medicine and critical care and become board-certified physicians. Graduates of our program have pursued various career pathways, including emergency department practice, critical care medicine, academic medicine, research positions, and leadership roles.
+                      </p>
+                      <p>
+                        We are proud of our Emergency and Critical Care Residency Program at Yekatit 12 Hospital Medical College. We invite dedicated and passionate individuals to join us on this challenging and rewarding journey of becoming skilled emergency physicians and critical care specialists who provide immediate, life-saving care to critically ill and injured patients.
+                      </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='residency-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Residency Program<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                        <img src="{% static '/images/academics/undergrad/emergency-care/emergency-headline.png' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                      <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>8:30 am - 5:30 pm</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday - Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                      </ul>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Maxillofacial surgery' %}
+        <section class="section department-single">
+        <div class="container">
+
+            <div class="row">
+            <div class="col-lg-8">
+                <div  class="department-content mt-5">
+                <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                <div class="divider my-4"></div>
+                <p>
+                    Welcome to the Maxillofacial Surgery Residency Program at Yekatit 12 Hospital Medical College. Our program is dedicated to training highly skilled and proficient surgeons in the specialized field of maxillofacial surgery. We offer a comprehensive and rigorous training curriculum that prepares residents to provide exceptional care in the diagnosis, treatment, and management of conditions affecting the face, jaws, and related structures.          
+                  </p>
+                  <p>
+                    <strong>Program Overview</strong>: Our residency program provides residents with a well-rounded education in maxillofacial surgery. The program typically spans four years, during which residents gain extensive clinical experience, develop surgical proficiency, and acquire a deep understanding of the complex anatomy and pathology of the maxillofacial region. Our goal is to produce competent and compassionate maxillofacial surgeons capable of providing comprehensive care to patients with diverse craniofacial conditions.          
+                  </p>
+                  <p>
+                    <strong>Clinical Training</strong>: Residents rotate through various clinical settings, including the oral and maxillofacial surgery department, operating rooms, outpatient clinics, and trauma centers. Under the guidance of experienced faculty members, residents actively participate in the evaluation, diagnosis, and surgical management of patients with congenital anomalies, trauma-related injuries, infections, tumors, temporomandibular joint disorders, and other maxillofacial conditions. They also gain experience in dental implantology, orthognathic surgery, cleft lip and palate repair, reconstructive surgery, and facial aesthetic procedures.         
+                  </p> 
+                  <p>
+                    <strong>Surgical Skills Development</strong>: Our program emphasizes hands-on surgical training to develop residents' technical skills and surgical expertise. Residents receive comprehensive training in a wide range of maxillofacial surgical procedures, including dentoalveolar surgery, orthognathic surgery, facial trauma reconstruction, bone grafting, facial rejuvenation, and tumor resection. They have access to state-of-the-art surgical facilities and advanced technologies to enhance their surgical capabilities.
+                  </p>
+                  <p>
+                    <strong>Multidisciplinary Collaboration</strong>: Maxillofacial surgery often requires collaboration with various specialties, including orthodontics, otolaryngology, plastic surgery, and neurosurgery. Our residents work closely with multidisciplinary teams to provide comprehensive and coordinated care to patients. They participate in interdisciplinary conferences, tumor boards, and case discussions to develop a holistic approach to patient management.
+                  </p>
+                  <p>
+                    <strong>Didactic Curriculum</strong>: Our residency program offers a comprehensive didactic curriculum that covers key topics in maxillofacial surgery. Residents participate in regular conferences, lectures, case discussions, journal clubs, and multidisciplinary meetings. These educational sessions cover areas such as craniofacial anatomy, maxillofacial trauma, oral pathology, anesthesia, implantology, orthognathic surgery, and facial aesthetics. Our program emphasizes evidence-based practice and provides residents with the knowledge and critical thinking skills necessary for sound clinical decision-making.
+                  </p>
+                  <p>
+                    <strong>Research and Scholarly Activities</strong>: We encourage residents to engage in research and scholarly activities throughout their training. Our program provides opportunities to participate in clinical research projects, present at national and international conferences, and publish in scientific journals. Residents have access to research mentors, resources, and a supportive research environment to foster their academic growth.
+                  </p>
+                  <p>
+                    <strong>Continuing Education</strong>: We believe in the importance of lifelong learning and professional development. Our program supports residents in attending national and international conferences, workshops, and courses to stay updated with the latest advancements in maxillofacial surgery. We encourage residents to pursue fellowship opportunities and advanced training to further enhance their skills and expertise.
+                  </p>
+                  <p>
+                    <strong>Certification and Career Pathways</strong>: Upon successful completion of our residency program, residents are eligible to take the certification examination in oral and maxillofacial surgery and become board-certified specialists. Graduates of our program have pursued various career pathways, including private practice, academic positions, research positions, and leadership roles within the field of maxillofacial surgery.
+                  </p>
+                  <p>
+                    We are proud of our Maxillofacial Surgery Residency Program at Yekatit 12 Hospital Medical College. We invite dedicated and passionate individuals to join us on this exciting and rewarding journey of becoming skilled maxillofacial surgeons who provide comprehensive care and improve the lives of patients with craniofacial conditions.
+                  </p>
+
+                <br><br>
+                <a
+                    href="{% url 'page_view' page_slug='residency-program' %}"
+                    class="btn btn-main-2 btn-round-full"
+                    >Residency Program<i class="icofont-simple-right ml-2"></i
+                ></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+            <div class="row">
+            <div class="col-lg-12">
+                <div class="department-img">
+                    <img src="{% static '/images/academics/residency/maxillofacial.jpeg' %}" alt="" class="img-fluid" />
+                </div>
+            </div>
+            </div>
+                <div class="sidebar-widget schedule-widget mt-5">
+                <h5 class="mb-4">Time Schedule</h5>
+
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between align-items-center">
+                  <a href="#">Monday - Friday</a>
+                  <span>8:30 am - 5:30 pm</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center">
+                  <a href="#">Saturday - Sunday</a>
+                  <span>Closed</span>
+                  </li>
+                </ul>
+                
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- profile -->
+        <section class="section clients">
+        <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-title text-center">
+                <h2 class="deps-header">Staff Profile</h2>
+                <div class="divider mx-auto my-4"></div>
+                <p>
+                    Summary of staff profile in {{ department.title }} department
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- ========================================tesmonial============== -->
+        <section class="mediacal-swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            {% for profile in staff_profiles %}
+                <div class="swiper-slide">
+                <div class="testimonial-card">
+                {% if profile.picture %}
+                    <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                {% else %}
+                    <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                {% endif %}
+                <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                <p>{{ profile.title }}</p>
+                </div>
+                </div>
+            {% endfor %}
+            
+            <!-- Repeat this structure for each testimonial -->
+            </div>
+            <div class="testimonial-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        </section>
+    {% endif %}
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+      <script src="plugins/jquery/jquery.js"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="plugins/bootstrap/js/popper.js"></script>
+      <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="plugins/counterup/jquery.easing.js"></script>
+      <!-- Slick Slider -->
+      <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+      <!-- Counterup -->
+      <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+  
+      <script src="plugins/shuffle/shuffle.min.js"></script>
+      <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

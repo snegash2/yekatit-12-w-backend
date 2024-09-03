@@ -1,0 +1,324 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+
+    <section class="page-title bg-1 custom-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <h1 class="text-capitalize mb-5 text-lg">Post graduate Program</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% for department in content_list %}
+        {% if department.title ==  'General public health' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+
+                    <p>
+                        Welcome to the General Public Health Master’s Program at Yekatit 12 Hospital Medical College. Our program equips students with the knowledge and skills to excel in public health and improve community health outcomes.
+                    </p>
+                    <p> 
+                        With a comprehensive curriculum covering core competencies and specialization options, practical experience through fieldwork, and research opportunities, our interdisciplinary program prepares students for diverse careers in public health. Graduates find opportunities in various sectors, including public health organizations, government agencies, research institutions, and more.
+                    </p>
+                    <p>
+                        Join us to make a difference in public health and explore the exciting opportunities that await you.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='school-of-public-health' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >School of Public Health<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/masters/public-health.png' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Sunday</a>
+                        <span>8:30 am - 5:30 pm</span>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Reproductive health' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+
+                    <p>
+                        Welcome to the Reproductive Health Master’s Program at Yekatit 12 Hospital Medical College. Our program equips students with a comprehensive understanding of reproductive health and the skills to address related challenges.
+                    </p>
+                    <p> 
+                        With a specialized curriculum covering various topics, practical fieldwork experience, and opportunities for research, our interdisciplinary program prepares students for diverse careers in reproductive health. Graduates find employment in clinics, research institutions, non-profit organizations, government agencies, and international organizations, in roles such as specialists, program managers, researchers, policy analysts, and educators.
+                    </p>
+                    <p>
+                        Join us to make a positive impact in the field of reproductive health. Explore our website for more information on the program, faculty, admission requirements, and exciting opportunities that await you.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='school-of-public-health' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >School of Public Health<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/masters/reproductive-health.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Sunday</a>
+                        <span>8:30 am - 5:30 pm</span>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'MSc in health care quality' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+
+                    <p>
+                        Welcome to the MSc in Healthcare Quality Master’s Program at Yekatit 12 Hospital Medical College. Our program equips students with the knowledge and skills to drive quality improvement in healthcare settings and enhance patient outcomes.
+                    <p> 
+                        With a specialized curriculum covering topics such as healthcare systems, quality measurement, patient safety, and leadership, our program prepares students for careers as quality improvement specialists, data analysts, and managers. Through practical experience, research opportunities, and an interdisciplinary approach, our students gain the tools to address complex healthcare challenges.
+                    </p>
+                    <p>
+                        Join us to make a positive impact on healthcare quality and explore the exciting opportunities in this field. Visit our website for more information on the program, faculty, admission requirements, and the opportunities that await you in healthcare quality improvement.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='school-of-public-health' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >School of Public Health<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/masters/healthcare-quality.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Sunday</a>
+                        <span>8:30 am - 5:30 pm</span>
+                        </li>
+                    </ul>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+      <script src="plugins/jquery/jquery.js"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="plugins/bootstrap/js/popper.js"></script>
+      <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="plugins/counterup/jquery.easing.js"></script>
+      <!-- Slick Slider -->
+      <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+      <!-- Counterup -->
+      <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+  
+      <script src="plugins/shuffle/shuffle.min.js"></script>
+      <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

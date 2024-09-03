@@ -1,0 +1,1252 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+<link rel="stylesheet" href="{% static 'css/department.css' %}" />
+<link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+
+
+    {% for content in content_list %}
+        {% if content.title ==  'School of Medicine' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for medicine in content.medicines.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ medicine.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ medicine.name }}</h4>
+                            <p class="mb-4">
+                                {{ medicine.description }}
+                            </p>
+                            
+                            <a href="{{ medicine.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'School of Public Health' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for public_health in content.publichealths.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ public_health.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ public_health.name }}</h4>
+                            <p class="mb-4">
+                                {{ public_health.description }}
+                            </p>
+                            <a href="{{ public_health.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Fellowship and PhD Program' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for fellowship in content.fellowships.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ fellowship.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ fellowship.name }}</h4>
+                            <p class="mb-4">
+                                {{ fellowship.description }}
+                            </p>
+                            <a href="{{ fellowship.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Residency Program' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for residency in content.residencys.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ residency.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ residency.name }}</h4>
+                            <p class="mb-4">
+                                {{ residency.description }}
+                            </p>
+                            <a href="{{ residency.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Undergraduate Program' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for undergrad in content.undergrads.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ undergrad.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ undergrad.name }}</h4>
+                            <p class="mb-4">
+                                {{ undergrad.description }}
+                            </p>
+                            <a href="{{ undergrad.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Postgraduate Program' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for master in content.masters.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ master.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ master.name }}</h4>
+                            <p class="mb-4">
+                                {{ master.description }}
+                            </p>
+                            <a href="{{ master.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Registrar' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for registrar in content.registrars.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ registrar.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ registrar.name }}</h4>
+                            <p class="mb-4">
+                                {{ registrar.description }}
+                            </p>
+                            <a href="{{ registrar.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Library Service' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 text-center">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider mx-auto my-4"></div>
+                                <p>
+                                    {{ content.content }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for library in content.libraries.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ library.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ library.name }}</h4>
+                            <p class="mb-4">
+                                {{ library.description }}
+                            </p>
+                            <a href="{{ library.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Research and publication department' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider my-4"></div>
+                                <p class="text-style">
+                                    Yekatit 12 Hospital Medical College upholds research as one of its three foundational pillars. 
+                                    The college's research endeavours are geared towards advancing the development of the country 
+                                    and the region, nurturing specialists equipped with fundamental research competencies, and 
+                                    addressing multidisciplinary community challenges. Our aim is to produce knowledge that 
+                                    informs strategic development policies and fosters positive societal change.
+                                  </p>
+                                  <p class="text-style">
+                                    Since its inception, Yekatit 12 Hospital Medical College has been actively engaged in 
+                                    a range of research initiatives focused on identifying community needs and conducting 
+                                    applied research projects, including large-scale endeavours aligned with the college's 
+                                    thematic areas. These efforts are coordinated by the Research and Publication Office (RPO) 
+                                    in collaboration with stakeholders, with a focus on serving the community and fostering 
+                                    integration for impactful outcomes.
+                                  </p>
+                                  <p class="text-style">
+                                    The RPO, structured into research, publication, and technology transfer units, operates 
+                                    in tandem with the college's leadership and departments to cultivate a vibrant research 
+                                    culture. Through close collaboration, we strive to disseminate research findings effectively, 
+                                    promote continuous learning, and prepare the next generation of Ethiopian scholars.
+                                  </p>
+                                  <p class="text-style">
+                                    In pursuit of our mission, Yekatit 12 Hospital Medical College endeavours to establish 
+                                    research centers and sites that facilitate collaboration among researchers, students, and 
+                                    industry partners. These initiatives are designed to enhance research opportunities, foster 
+                                    academic excellence, and address real-world challenges with an interdisciplinary approach.
+                                  </p>
+                                  <p class="text-style">
+                                    To realize our vision, it is imperative to strengthen partnerships with stakeholders nationally 
+                                    and internationally. By enhancing their roles and connections, we aim to fuel knowledge expansion, 
+                                    drive innovation, and bolster economic and social development, ultimately improving human capital 
+                                    and quality of life.
+                                  </p>
+                                  <p class="text-style">
+                                    In conclusion, I urge stakeholders at all levels to unite in coordination and collaboration to advance 
+                                    our higher education mission in research and publication. Together, we can contribute to the comprehensive 
+                                    development of our nation and beyond.
+                                  </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row" class="row">
+                        {% for research in content.researches.all %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="department-block mb-5 hover-card">
+                            <img
+                            src="{{ research.image.url }}"
+                            alt=""
+                            class="img-fluid w-100"
+                            />
+                            <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ research.name }}</h4>
+                            <p class="mb-4">
+                                {{ research.description }}
+                            </p>
+                            <a href="{{ research.link }}" class="read-more"
+                                >view Detail <i class="icofont-simple-right ml-2"></i
+                            ></a>
+                            </div>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Education Development Center' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    The department's service profile encompasses several key areas, beginning
+                                    with educational quality assurance. This involves monitoring and
+                                    inspecting the college and departments on academic standards, quality, and
+                                    relevance in areas such as programs and modules, infrastructure and
+                                    facilities, teaching and learning, and assessment practices. The
+                                    department is also responsible for developing quality assurance guidelines
+                                    and procedures in collaboration with academic staff, initiating and
+                                    conducting institutional and program evaluations, and ensuring
+                                    comprehensive data is gathered to enhance quality.
+                                </p>             
+                                <p>
+                                    Another crucial aspect of the department's role is faculty development.
+                                    This includes generating and disseminating knowledge relevant to
+                                    healthcare providers, conducting need assessments, and providing training
+                                    for academic staff in teaching, learning, assessment, and research
+                                    activities. The department also conducts satisfaction surveys for both
+                                    students and academic staff, providing and facilitating staff development
+                                    workshops on academic quality assurance. Furthermore, the department plays
+                                    a pivotal role in instructional design, curriculum development, review,
+                                    and appraisal. It advises on the establishment of courses of instruction
+                                    and curricula, monitors teaching processes, and evaluates the relevance of
+                                    academic programs. It also establishes mechanisms for joint planning to
+                                    engage stakeholders in curriculum design and development, ensuring
+                                    continuous appraisal, analysis, and improvement of curricula within each
+                                    department and unit.
+                                </p>
+                                <h3 class="mt-5 mb-4">Summary Of Duties</h3>
+                                <div class="divider my-4"></div>
+                                <ul class="list-unstyled department-service">
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Faculty development, E.g., Staff
+                                    training on teaching-learning and assessment methods
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Curriculum appraisal, revision and
+                                    development
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Simulation center (skills
+                                    development lab) management
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Educational quality management and
+                                    evaluation, E.g., Assessing, analyzing and improving quality of
+                                    education using educational standards
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Conducting self-evaluation and
+                                    accreditation report with updated DCT checklists
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Resource/expert advice for faculty
+                                    on teaching-learning, assessment, curriculum and research
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="department-img">
+                                <img src="{% static 'images/academics/EDC/EDC-team.png' %}" alt="" class="img-fluid" />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="sidebar-widget schedule-widget mt-5">
+                            <h5 class="mb-4">Time Schedule</h5>
+                    
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Monday - Friday</a>
+                                <span>8:30 am - 5:30 pm</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Saturday - Sunday</a>
+                                <span>Closed</span>
+                                </li>
+                            
+                            </ul>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+                <div class="container">
+                    <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-title text-center">
+                        <h2 class="deps-header">Staff Profile</h2>
+                        <div class="divider mx-auto my-4"></div>
+                        <p>
+                            Summary of staff profile in {{ content.title }} department
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- ========================================tesmonial============== -->
+                <section class="mediacal-swiper">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="testimonial-card">
+                            <img src="{% static 'images/academics//EDC/main.jpg' %}" alt="Staff Image" />
+                            <h3>Mr. Ayelign Derebe</h3>
+                            <p>Microbiologist</p>
+                           
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-card">
+                            <img src="{% static 'images/academics/EDC/seba.jpg' %}" alt="Staff Image" />
+                            <h3>Dr. Saba Elias</h3>
+                            <p>General Practitioner</p>
+                           
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-card">
+                            <img src="{% static 'images/academics/EDC/birt.jpg' %}" alt="Staff Image" />
+                            <h3>Dr. Birtukan Berihun</h3>
+                            <p> General Practitioner</p>
+                           
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-card">
+                            <img src="{% static 'images/academics/EDC/habetyimer.png' %}" alt="Staff Image" />
+                            <h3> Dr. Habtimer Abi </h3>
+                            <p>General Practitioner</p>
+                           
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="testimonial-card">
+                            <img src="{% static 'images/academics/EDC/getu.jpg' %}" alt="Staff Image" />
+                            <h3>W/t Getu Damtew</h3>
+                            <p>Secretary</p>
+                           
+                          </div>
+                        </div>
+                     
+                        <!-- Repeat this structure for each testimonial -->
+                      </div>
+                      <div class="testimonial-pagination"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                </section>
+        {% endif %}
+        {% if content.title ==  'Continuing Professional Development' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h2>{{ content.title }} (CPD)</h2>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    Welcome to our Continuing Professional Development center at Yekatit 12 Hospital 
+                                    Medical College which gives the ongoing process of learning, acquiring new 
+                                    knowledge, skills, and competencies, and maintaining professional standards 
+                                    in a particular field or profession. CPD is crucial for professionals to stay 
+                                    up to date with the latest developments, advancements, and best practices in 
+                                    their respective disciplines.             
+                                </p>
+                                <h3 class="mt-5 mb-4">CPD key points:</h3>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    <strong>Lifelong Learning:</strong> CPD recognizes that learning is a continuous 
+                                    process that extends beyond formal education. It encourages professionals to engage in ongoing 
+                                    learning activities throughout their careers to enhance their knowledge and skills.
+                                </p>
+                                <p>
+                                <strong>Professional Development:</strong> CPD focuses on the development of professionals in 
+                                their specific fields. It aims to improve their competence, performance, and effectiveness in 
+                                delivering quality services to clients, customers, or patients.
+                                </p>
+                                <p>
+                                <strong>Learning Activities:</strong> CPD encompasses a wide range of learning activities, 
+                                including attending conferences, workshops, seminars, webinars, and training programs. 
+                                It can also involve self-directed learning through reading professional literature, 
+                                participating in online courses, completing assignments, or engaging in reflective practice.
+                                </p>
+                                <p>
+                                <strong>Reflective Practice:</strong> Reflection is an essential component of CPD. Professionals 
+                                are encouraged to reflect on their experiences, identify areas for improvement, and set goals 
+                                for their future development. This reflective practice helps in enhancing performance and 
+                                ensuring continuous improvement.
+                                </p>          
+                                <p>
+                                <strong>Professional Standards and Regulations:</strong> Many professional bodies and licensing 
+                                organizations require their members to engage in CPD activities to maintain their professional 
+                                status and meet regulatory requirements. CPD often involves accumulating a certain number of 
+                                CPD hours or credits within a specific time period.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="department-img">
+                                <img src="{% static 'images/academics/cpd/cpd.jpeg' %}" alt="" class="img-fluid" />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="sidebar-widget schedule-widget mt-5">
+                            <h5 class="mb-4">Time Schedule</h5>
+                    
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Monday - Friday</a>
+                                <span>9:00 - 17:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Saturday</a>
+                                <span>9:00 - 16:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Sunday</a>
+                                <span>Closed</span>
+                                </li>
+                            </ul>
+                    
+                            <div class="sidebar-contatct-info mt-4">
+                                <p class="mb-0">Need Urgent Help?</p>
+                                <h3>+251984029014</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Information And Communication Technology' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h2>{{ content.title }} (ICT)</h2>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    The ICT (Information and Communication Technology) infrastructure and functionalities of 
+                                    Yekatit 12 Hospital Medical College's website are designed to provide a comprehensive 
+                                    online platform for communication, information dissemination, and engagement with patients, 
+                                    healthcare professionals, and the general public. The ICT actively follows the digital 
+                                    health system including EMR and SIS in our hospital medical college.           
+                                </p>
+                                <h3 class="mt-5 mb-4">Summary Of Duties</h3>
+                                <div class="divider my-4"></div>
+                                <ul class="list-unstyled department-service">
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Network Management and Maintenance
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>Technical Support and Troubleshooting
+                                    </li>
+                                    <li>
+                                    <i class="icofont-check mr-2"></i>System and Data Security
+                                    </li>
+                                    <li>
+                                        <i class="icofont-check mr-2"></i>Software and Hardware Management
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="department-img">
+                                <img src="{% static 'images/academics/ict/ict.png' %}" alt="" class="img-fluid" />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="sidebar-widget schedule-widget mt-5">
+                            <h5 class="mb-4">Time Schedule</h5>
+                    
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Monday - Friday</a>
+                                <span>9:00 - 17:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Saturday</a>
+                                <span>9:00 - 16:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Sunday</a>
+                                <span>Closed</span>
+                                </li>
+                            </ul>
+                    
+                            <div class="sidebar-contatct-info mt-4">
+                                <p class="mb-0">Need Urgent Help?</p>
+                                <h3>+251984029014</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Student Service' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h2>{{ content.title }}</h2>
+                                <div class="divider my-4"></div>
+                                <h3 class="mt-5 mb-4">Dining Services</h3>
+                                <p>
+                                Dining services play a crucial role in the overall student experience at 
+                                Yekatit 12 Hospital Medical College. Yekatit 12 Hospital Medical College 
+                                offers an on-campus cafeteria or food court where students can enjoy a 
+                                variety of meals and snacks. The cafeteria is designed to provide a comfortable 
+                                and inviting space for students to dine and socialize. It may have multiple food 
+                                stations or counters offering different cuisines, including local and 
+                                international dishes.               
+                                </p>
+                                <h3 class="mt-5 mb-4">Dormitory Services</h3>
+                                <p>
+                                The quality of your living learning environment plays an important part in 
+                                your medical collge competence. Our dormitories are a place where you live 
+                                in a community that values friendship and academic success. In planning and 
+                                operating our dormitories, we want to meet your needs in every way possible. 
+                                We believe that life in dormitory offers by far more than a roof over your head! 
+                                This is because there are internet labs and lounges around your dormitory which 
+                                works 16 hours a day. However, an understanding of and respect for the rights 
+                                of others is of utmost importance in making dormitory life successful. 
+                                Hence, your cooperation and participation is helpful for the success of 
+                                your dormitory life. Above all, the staff is here to help you with challenges 
+                                associated with university life.
+                                </p>
+                                <h3 class="mt-5 mb-4">Health Services</h3>
+                                <p>
+                                Being in good health is one of the basic prerequisite for good academic performance. 
+                                Thus, we strive to provide the best care possible through our professionals in a 
+                                manner that is welcoming and respectful of everyone. The hospital offers many 
+                                services to the students, including:
+                                </p>
+                                <ul class="list-unstyled department-service">
+                                <li>
+                                    <i class="icofont-check mr-2"></i>Health Promotion/Disease Prevention
+                                </li>
+                                <li>
+                                    <i class="icofont-check mr-2"></i>Routine health care provision
+                                </li>
+                                <li>
+                                    <i class="icofont-check mr-2"></i>Adolescent and youth reproductive Health Service
+                                </li>
+                                </ul>
+                                <h3 class="mt-5 mb-4">Financial and Cost sharing Services</h3>
+                                <p>
+                                When you decide to study at university you will be making an investment in your 
+                                future. The Student Finance and cost sharing office is here to help you to access 
+                                all the information you will need with regard to dining and dormitory services.
+                                </p>
+                                <h3 class="mt-5 mb-4">Disability Support</h3>
+                                <p>
+                                If you have a particular learning difficulty that may negatively impact upon 
+                                your learning experience at Yekatit 12 Hospital medical college, it is quite 
+                                helpful if you consult us so as we provide support in all our areas of the 
+                                services. Some rooms have been reserved specifically for students with 
+                                special needs. If you have special needs due to a disability, you should 
+                                indicate them clearly in your application form and report in person so that 
+                                we can allocate the most appropriate room available.
+                                </p>
+                                <h3 class="mt-5 mb-4">Anti-harassment Support</h3>
+                                <p>
+                                Anti-harassment is an essential student service provided by Yekatit 12 Hospital 
+                                Medical College to ensure a safe and inclusive learning environment for all students.
+                                </p>
+                                <p>
+                                Yekatit 12 Hospital Medical College has a comprehensive anti-harassment policy in 
+                                place that clearly defines what constitutes harassment and provides guidelines 
+                                for reporting and addressing incidents. The policy emphasizes a zero-tolerance 
+                                approach towards any form of harassment, including but not limited to sexual 
+                                harassment, bullying, discrimination, and verbal or physical abuse. 
+                                The policy is prominently displayed on the college's website and is 
+                                communicated to all students, faculty, and staff.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="department-img">
+                                <img src="{% static 'images/academics/student-service/students.png' %}" alt="" class="img-fluid" />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="sidebar-widget schedule-widget mt-5">
+                            <h5 class="mb-4">Time Schedule</h5>
+                    
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Monday - Friday</a>
+                                <span>9:00 - 17:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Saturday</a>
+                                <span>9:00 - 16:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Sunday</a>
+                                <span>Closed</span>
+                                </li>
+                            </ul>
+                    
+                            <div class="sidebar-contatct-info mt-4">
+                                <p class="mb-0">Need Urgent Help?</p>
+                                <h3>+251984029014</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'Community Service' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">Academics</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h2>Summary of {{ content.title }}</h2>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    Community services offered by Yekatit 12 Hospital Medical College provide 
+                                    opportunities for students to engage with the local community, contribute 
+                                    to social causes, and develop a sense of social responsibility.              
+                                </p>
+                                <h3 class="mt-5 mb-4">Key participation point include:</h3>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    <strong>Volunteer Programs:</strong> Yekatit 12 Hospital Medical College may organize volunteer programs 
+                                    that enable students to contribute their time and skills to community projects. These programs could 
+                                    involve activities such as assisting in local health clinics, participating in medical outreach programs, 
+                                    or providing support to underserved communities. Students have the opportunity to make a positive 
+                                    impact on the lives of others while gaining practical experience and developing empathy.
+                                </p>
+                                <p>
+                                <strong>Health Education Campaigns:</strong> The college may conduct health education campaigns in collaboration 
+                                with community organizations and local schools. Students can actively participate in these campaigns by delivering 
+                                presentations, organizing workshops, or providing informational materials on various health topics. This helps 
+                                raise awareness about important health issues, promotes preventive measures, and empowers community 
+                                members to make informed decisions about their well-being.
+                                </p>
+                                <p>
+                                <strong>Medical Camps and Screenings:</strong> Yekatit 12 Hospital Medical College may organize medical camps and 
+                                screenings in collaboration with community partners. These camps provide free or low-cost healthcare services 
+                                to underserved populations who may have limited access to medical facilities. Students, under the supervision 
+                                of faculty members, can assist in conducting health screenings, administering vaccinations, providing 
+                                basic medical care, and offering health counseling to the community members.
+                                </p>
+                                <p>
+                                <strong>Health Promotion Initiatives:</strong> The college may initiate health promotion programs aimed at 
+                                improving the overall health and well-being of the community. These initiatives could focus on promoting 
+                                healthy lifestyles, disease prevention, and awareness campaigns on topics such as nutrition, exercise, 
+                                mental health, and hygiene. Students can actively participate in planning and implementing these 
+                                programs, engaging with community members to encourage positive health behaviors.
+                                </p>
+                                <p>
+                                <strong>Collaborations with Non-Profit Organizations:</strong> Yekatit 12 Hospital Medical College may establish 
+                                partnerships with local non-profit organizations that work towards community development and healthcare improvement. 
+                                Through these collaborations, students can engage in ongoing community service projects and participate in 
+                                initiatives that address specific needs of the community. This can include activities like supporting 
+                                healthcare clinics, conducting health assessments, or providing assistance in community-based research projects.
+                                </p>
+                                <p>
+                                <strong>Blood Drives and Health Campaigns:</strong> The college may organize blood drives and health 
+                                campaigns in coordination with blood banks and healthcare organizations. Students can actively participate 
+                                in promoting and organizing these events, encouraging members of the college community and the wider public 
+                                to donate blood and educating them about the importance of regular blood donations for medical 
+                                emergencies and treatments.
+                                </p>
+                                <p>
+                                <strong>Outreach Programs:</strong> Yekatit 12 Hospital Medical College may organize outreach programs 
+                                to reach out to marginalized or vulnerable populations. This can involve providing healthcare services, 
+                                health education, or basic necessities to individuals or communities in need. Students can actively 
+                                participate in these outreach programs, gaining firsthand experience in addressing healthcare 
+                                disparities and understanding the challenges faced by underserved populations.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="department-img">
+                                <img src="{% static 'images/academics/community/community.jpeg' %}" alt="" class="img-fluid" />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="sidebar-widget schedule-widget mt-5">
+                            <h5 class="mb-4">Time Schedule</h5>
+                    
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Monday - Friday</a>
+                                <span>9:00 - 17:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Saturday</a>
+                                <span>9:00 - 16:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Sunday</a>
+                                <span>Closed</span>
+                                </li>
+                            </ul>
+                    
+                            <div class="sidebar-contatct-info mt-4">
+                                <p class="mb-0">Need Urgent Help?</p>
+                                <h3>+251984029014</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        {% endif %}
+        {% if content.title ==  'EMR Portal' %}
+            <section class="page-title bg-1 custom-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">EMR Portal</h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section service-2 custom-service">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h2>Summary of {{ content.title }}</h2>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    Welcome to Yekatit 12 Hospital Medical College, where we have implemented an advanced Electronic Medical Record (EMR) system to enhance patient care and streamline healthcare processes.              
+                                </p>
+                                <p>
+                                    Our EMR system revolutionizes the way we manage patient information, 
+                                    ensuring accuracy, accessibility, and efficiency throughout the healthcare 
+                                    journey. With this state-of-the-art technology, we have transitioned from 
+                                    traditional paper-based records to a secure, digital platform that offers numerous 
+                                    benefits for both patients and healthcare providers.
+                                </p>
+                                <h3 class="mt-5 mb-4">Key features of our EMR system include:</h3>
+                                <div class="divider my-4"></div>
+                                <p>
+                                    <strong>Comprehensive Patient Information:</strong> Our EMR system allows for the seamless integration 
+                                    and organization of patient data, including medical history, lab results, medication 
+                                    records, imaging reports, and more. This consolidated information provides a holistic 
+                                    view of each patient's health status, enabling our healthcare professionals to make 
+                                    informed decisions and deliver personalized care.
+                                 </p>
+                                 <p>
+                                <strong>Accessibility and Timely Information Sharing:</strong> The EMR system enables authorized healthcare 
+                                    providers to access patient records securely and efficiently, regardless of their location 
+                                    within the hospital. This accessibility promotes seamless collaboration and timely information 
+                                    sharing among multidisciplinary teams, ensuring coordinated and well-informed care.
+                                 </p>
+                                 <p>
+                                <strong>Enhanced Patient Safety:</strong> Our EMR system incorporates built-in safety features, such as medication 
+                                    interaction alerts, allergy notifications, and clinical decision support tools. These features 
+                                    help healthcare providers minimize errors, improve patient safety, and ensure appropriate and 
+                                    evidence-based treatment plans.
+                                 </p>
+                                <p>
+                                <strong>Efficient Workflow and Documentation:</strong> With the EMR system, healthcare providers can efficiently 
+                                    document patient encounters, including diagnoses, treatments, and procedures. This digital 
+                                    documentation reduces paperwork and streamlines workflow, allowing our staff to spend more 
+                                    time focused on patient care.
+                                </p>
+                                <p>
+                                    <strong>Integration with Imaging and Laboratory Systems:</strong> Our EMR system seamlessly integrates with 
+                                    our imaging and laboratory systems, facilitating the rapid retrieval and interpretation of 
+                                    diagnostic test results. This integration eliminates the need for manual data entry and 
+                                    enhances the accuracy and speed of diagnoses.
+                    
+                                </p>
+                                <p>
+                                <strong>Data Analytics and Reporting:</strong> Our EMR system collects and analyzes vast amounts of 
+                                    data, providing valuable insights into population health trends, disease patterns, 
+                                    and treatment outcomes. This data-driven approach enables us to identify areas for 
+                                    improvement, optimize resource allocation, and enhance the quality of care we provide.
+                                </p>
+                                <p>
+                                <strong>Privacy and Data Security:</strong> We prioritize patient privacy and data security. 
+                                    Our EMR system adheres to strict confidentiality standards and is designed to 
+                                    protect patient information from unauthorized access. We comply with applicable 
+                                    regulations and employ robust security measures to safeguard patient data at all times.
+                                </p>
+                                <p>
+                                    At Yekatit 12 Hospital Medical College, we are proud to offer an advanced EMR system 
+                                    that enhances patient care, promotes collaboration, and improves healthcare outcomes. 
+                                    Our commitment to leveraging technology ensures that we provide the highest standard 
+                                    of care and deliver an exceptional healthcare experience for our patients.
+                                </p>
+                                <p>
+                                    Dear visitors if you get the opportuniy to work for our hospital medical college you 
+                                    will get the access to work with EMR.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="department-img">
+                                <img src="{% static 'images/portal/portal.jpeg' %}" alt="" class="img-fluid" />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="sidebar-widget schedule-widget mt-5">
+                            <h5 class="mb-4">Time Schedule</h5>
+                    
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Monday - Friday</a>
+                                <span>9:00 - 17:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Saturday</a>
+                                <span>9:00 - 16:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                <a href="#">Sunday</a>
+                                <span>9:00 - 16:00</span>
+                                </li>
+                            </ul>
+                    
+                            <div class="sidebar-contatct-info mt-4">
+                                <p class="mb-0">Need Urgent Help?</p>
+                                <h3>+251984029014</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        {% endif %}
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+
+{% endblock content %}

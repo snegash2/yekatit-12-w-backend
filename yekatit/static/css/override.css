@@ -1,0 +1,19 @@
+.cstm-header-address {
+    color: rgb(207, 207, 207);
+    font-style: italic;
+    font-size: smaller;
+}
+
+.clickable_link {
+    color: rgb(0, 0, 149);
+    text-decoration: underline;
+}
+
+.text-style {
+    text-align: justify;
+}
+
+.img-cstm{
+    display: block;
+    margin: auto;
+}

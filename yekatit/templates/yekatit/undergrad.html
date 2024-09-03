@@ -1,0 +1,763 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+
+    <section class="page-title bg-1 custom-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <h1 class="text-capitalize mb-5 text-lg">Undergraduate Program</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% for department in content_list %}
+        {% if department.title ==  'Biomedical Science' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p >
+                        Biomedical science department is one of the major arms in the
+                        new innovative medical education curriculum which has been
+                        serving the academic institution for the last fifteen years in
+                        equipping medical students with the essential knowledge,
+                        skills and values that prepares them to handle the problems of
+                        health care in Ethiopia.
+                      </p>
+                      <p>
+                        The department has been carrying out academic activities and
+                        other tasks in an integrated fashion through units of basic
+                        sciences, PCD and PBL. There are 20 permanent full time and 1
+                        contract staff actively working in these departments; And 1
+                        PBL and 1 PCD coordinators that facilitate PCD and PBL
+                        academic activities. Currently there are 17 IESO to medicine
+                        and 51 NIME Year I medical students making the total number of
+                        students 68
+                      </p>
+      
+                      <h3 class="mt-5 mb-4">Summary Of Duties</h3>
+                      <div class="divider my-4"></div>
+                      <ul class="list-unstyled department-service">
+                        <li>
+                          <i class="icofont-check mr-2"></i>Conduct lectures and
+                          laboratory
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i>Prepare written exams,
+                          invigilate and submission of module grades
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i>Conduct problem solving
+                          researches
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i>Conduct problem solving
+                          researches
+                        </li>
+      
+                        <li>
+                          <i class="icofont-check mr-2"></i>Carry out community
+                          services
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i>Establish communication
+                          and work with international/national institutions
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i>Provide student support
+                          services
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i> Documentation of files
+                          and records on academic matters
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i> Partake on academic quality 
+                          improvement tasks
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i> Facilitate and take part in academic staff's 
+                          capacity building trainings both short and long term.                    
+                        </li>
+                        <li>
+                          <i class="icofont-check mr-2"></i> Attend and actively participate in 
+                          academic related meetings                  
+                        </li>
+                      </ul>
+                      <h3 class="mt-5 mb-4">Organization Chart</h3>
+                      <div class="divider my-4"></div>
+                      <div class="department-img">
+                        <img src="{% static 'images/academics/undergrad/biomedical/org-chart.png' %}" alt="" class="img-fluid" />
+                      </div>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='undergraduate-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Undergraduate Programs<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static '/images/academics/undergrad/biomedical/th.jpg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>9:00 - 17:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday</a>
+                        <span>9:00 - 16:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Undergraduate medicine program' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                      <p>
+                        Welcome to the Undergraduate Medicine Program at Yekatit 12 Hospital Medical College. Our program is designed to provide aspiring medical students with a comprehensive and rigorous education in the field of medicine. We offer a dynamic curriculum, experienced faculty, and state-of-the-art facilities to prepare students for a successful career in medicine.
+                      </p>
+                        The following are the seven domains of competencies in undergraduate medicine program:
+                        <ol type="1" style="margin-left: 30px;">
+                            
+                            <li>Professional Values, Attitudes, Behavior and Ethics</li>
+                            <li>Scientific Foundation of Medicine</li>
+                            <li>Communication Skills</li>
+                            <li>Clinical Skills,</li>
+                            <li>Population Health and Health Systems,</li>
+                            <li>Management of Information,</li>
+                            <li>Critical Thinking and Research and Practice-Based Improvement</li>
+                        </ol>
+
+                      <p> 
+                        <strong>Program Overview</strong>: The Undergraduate Medicine Program is a full-time, five-year program that combines classroom learning, practical training, and clinical experiences. Our curriculum is carefully structured to provide a strong foundation in the basic sciences, clinical skills, and professional development. We aim to produce competent and compassionate physicians who are equipped to meet the healthcare needs of our community and beyond.
+                      </p>
+                      <p>
+                        <strong>Pre-Clinical Years</strong>: The first two years of the program, known as the pre-clinical years, focus on building a solid understanding of the basic medical sciences. Students learn subjects such as anatomy, physiology, biochemistry, pharmacology, pathology, microbiology, and behavioral sciences. They engage in interactive lectures, small group discussions, laboratory sessions, and hands-on training in our well-equipped facilities.
+                      </p>
+                      <p>
+                        <strong>Clinical Years</strong>: The final three years of the program, known as the clinical years, provide students with valuable clinical experiences in various specialties. Students rotate through different clinical departments, including internal medicine, surgery, pediatrics, obstetrics and gynecology, psychiatry, and others. Under the guidance of experienced faculty and preceptors, students actively participate in patient care, physical examinations, diagnostic procedures, and treatment planning. They develop clinical skills, professionalism, and effective communication with patients and healthcare teams.
+                      </p>
+                      <p>
+                        <strong>Elective Rotations</strong>: In addition to the core clinical rotations, students have the opportunity to choose elective rotations in specific areas of interest. These elective rotations allow students to explore different medical specialties, gain insight into subspecialties, and further tailor their education to their career goals. Students receive mentorship and guidance from faculty members to make informed decisions about their elective rotations.
+                      </p>
+                      <p>
+                        <strong>Research and Scholarly Activities</strong>: We encourage students to engage in research and scholarly activities during their undergraduate years. Our program provides opportunities to participate in research projects, present findings at conferences, and publish in scientific journals. Students have access to research mentors, resources, and a supportive research environment to nurture their academic growth.
+                      </p>
+                      <p>
+                        <strong>Community Engagement and Outreach</strong>: We believe in the importance of community engagement and service. Our program encourages students to participate in community health initiatives, volunteer work, and outreach programs. These experiences provide students with a broader perspective on healthcare, cultural competency, and the social determinants of health.
+                      </p>
+                      <p>
+                        <strong>Professional Development</strong>: Our program is dedicated to nurturing the professional development of our students. We provide guidance in areas such as medical ethics, communication skills, leadership, and lifelong learning. Students receive mentorship from faculty members and have access to career counseling services to support their personal and professional growth.
+                      </p>
+                      <p>
+                        <strong>Examinations and Assessment</strong>: Throughout the program, students undergo regular assessments, including written exams, practical exams, clinical evaluations, and OSCEs (Objective Structured Clinical Examinations). These assessments ensure that students are progressing effectively and acquiring the necessary knowledge and skills to become competent physicians.
+                      </p>
+                      <p>
+                        <strong>Certification and Career Pathways</strong>: Upon successful completion of the Undergraduate Medicine Program, students are awarded a medical degree. Graduates are eligible to take the licensing examinations required to practice medicine. They can pursue various career pathways, including residency training in different medical specialties, academic medicine, research positions, public health, healthcare administration, and more.
+                      </p>
+                      <p>
+                        We are proud of our Undergraduate Medicine Program at Yekatit 12 Hospital Medical College. We invite enthusiastic and driven individuals to join us on this transformative journey of becoming skilled and compassionate physicians who make a positive impact on the health and well-being of individuals and communities.
+                      </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='undergraduate-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Undergraduate Programs<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/undergrad/medicine-program/medicine-program.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>9:00 - 17:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday</a>
+                        <span>9:00 - 16:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Post basic neonatal nursing program' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Post Basic Neonatal Nursing Program at our college. This Program is a specialized two and a half-year program designed for registered nurses seeking to enhance their skills in neonatal care. Through a combination of theoretical instruction, practical training, and clinical experiences, nurses will develop a deep understanding of neonatal physiology, common conditions, and specialized interventions. They will gain hands-on experience in neonatal units, learning essential skills such as resuscitation, medication administration, and venipuncture.
+                    </p>
+                    <p> 
+                        The program also covers specialized areas like neonatal transport and family support. Nurses will be equipped with research and evidence-based practice skills, as well as effective communication and leadership abilities. Graduates will receive a certification in Neonatal Nursing, opening up diverse career opportunities in neonatal care settings and providing a foundation for further professional growth.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='undergraduate-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Undergraduate Programs<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static '/images/academics/undergrad/neonatal/neonatal.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>9:00 - 17:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday</a>
+                        <span>9:00 - 16:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Post basic comprehensive nursing program' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Post Basic Comprehensive Nursing Program at our college. This Program is a comprehensive two and a half-year program designed for registered nurses seeking to advance their knowledge and skills in various areas of nursing practice. Through a combination of theoretical instruction, practical training, and clinical experiences, nurses can tailor their education to their professional goals and interests.
+                    </p>
+                    <p> 
+                        The program covers advanced nursing concepts, specialized areas of practice, research and evidence-based practice, and professional development. Graduates receive certifications in their chosen specialization, opening up diverse career opportunities in healthcare settings and providing a foundation for further professional growth.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='undergraduate-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Undergraduate Programs<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/undergrad/nursing/nurse.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>9:00 - 17:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday</a>
+                        <span>9:00 - 16:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Post basic emergency and critical care nursing program' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Post Basic Emergency and Critical Care Nursing Program at our college. This Program is a two and half year program designed for registered nurses seeking specialization in emergency and critical care nursing. It provides a comprehensive curriculum that combines theoretical instruction, practical training, and clinical experiences. Nurses will learn advanced concepts and skills related to emergency and critical care nursing, including pathophysiology, assessment and monitoring, pharmacology, emergency interventions, and critical care management. They will receive hands-on training in simulation labs and clinical settings, gaining proficiency in procedures and direct patient care.
+                    </p>
+                    <p> 
+                        The program also covers specialized areas such as pediatric emergencies, cardiac critical care, and trauma care. Nurses will develop research and evidence-based practice skills, enhance their professional development in communication and leadership, and receive a certification upon completion. Graduates can pursue careers in emergency departments, ICUs, and other critical care settings.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='undergraduate-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Undergraduate Programs<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/undergrad/emergency-care/emergency-care.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>9:00 - 17:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday</a>
+                        <span>9:00 - 16:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Post basic medical laboratory science' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to The Post Basic Medical Laboratory Science Program at our college. This  program is a two and half year program designed for individuals who have completed a diploma program in  medical laboratory science and want to study degree program further in specific areas of the field. 
+                    </p>
+                    <p> 
+                        The program provides advanced theoretical instruction, practical training, and clinical experiences to prepare laboratory professionals for specialized roles. Participants learn advanced laboratory techniques, gain hands-on experience, and develop skills in areas such as clinical chemistry, hematology, immunology, microbiology, molecular diagnostics, transfusion medicine, and histopathology. The program emphasizes research, evidence-based practice, and professional development. Graduates have diverse career opportunities in medical laboratories, hospitals, research institutions, and more, working as specialized laboratory technologists, supervisors, researchers, educators, or consultants.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='undergraduate-program' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Undergraduate Programs<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/undergrad/laboratory/laboratory.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    <div class="sidebar-widget schedule-widget mt-5">
+                    <h5 class="mb-4">Time Schedule</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Monday - Friday</a>
+                        <span>9:00 - 17:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Saturday</a>
+                        <span>9:00 - 16:00</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                        <a href="#">Sunday</a>
+                        <span>Closed</span>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-contatct-info mt-4">
+                        <p class="mb-0">Need Urgent Help?</p>
+                        <h3>+251984029014</h3>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- profile -->
+            <section class="section clients">
+            <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                    <h2 class="deps-header">Staff Profile</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>
+                        Summary of staff profile in {{ department.title }} department
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- ========================================tesmonial============== -->
+            <section class="mediacal-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {% for profile in staff_profiles %}
+                    <div class="swiper-slide">
+                    <div class="testimonial-card">
+                    {% if profile.picture %}
+                        <img src="{{ profile.picture.url }}" alt="{{ profile.name }}">
+                    {% else %}
+                        <img src="{% static 'default_images/default.png' %}" alt="Default Picture">
+                    {% endif %}
+                    <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                    <p>{{ profile.title }}</p>
+                    </div>
+                    </div>
+                {% endfor %}
+                
+                <!-- Repeat this structure for each testimonial -->
+                </div>
+                <div class="testimonial-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            </section>
+        {% endif %}
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+      <script src="plugins/jquery/jquery.js"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="plugins/bootstrap/js/popper.js"></script>
+      <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="plugins/counterup/jquery.easing.js"></script>
+      <!-- Slick Slider -->
+      <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+      <!-- Counterup -->
+      <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+  
+      <script src="plugins/shuffle/shuffle.min.js"></script>
+      <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

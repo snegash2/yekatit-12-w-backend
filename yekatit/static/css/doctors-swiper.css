@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+.mediacal-swiper {
+  padding: 30px;
+}
+.swiper-container {
+  max-width: 78rem;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  padding: 20px; /* Add padding */
+  margin-top: -9rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonial-card {
+  transition: transform 0.3s;
+  background-color: #f9f9f9;
+  padding: 23px;
+  border-radius: 10px;
+  height: 17.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card:hover {
+  transform: scale(1.1); /* Enlarge the testimonial */
+  opacity: 1; /* Make the testimonial fully visible */
+  cursor: pointer;
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px; /* Add padding */
+  cursor: pointer;
+  z-index: 10; /* Ensure arrows are above other elements */
+  transition: background-color 0.3s; /* Add a transition for hover effect */
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* .swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #223a66;
+} */
+
+/* Apply styles to the pagination bullets */
+.testimonial-pagination-bullet {
+  background-color: #223a66;
+  border-radius: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Apply styles to the active pagination bullet */
+.testimonial-pagination-bullet-active {
+  background-color: #4c952d;
+}
+/*  */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  color: #4c952d;
+  margin-right: 1.6rem;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  color: #4c952d;
+  margin-left: 1.5rem;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  background-color: transparent;
+  height: 24px;
+  width: 25px;
+  right: auto;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}
+.testimonial-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin-left: 36rem;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #4c952d;
+}
+#contact-btn {
+  background-color: #4c952d;
+  margin-left: 1rem;
+}
+
+/* .mediacal-swiper .swiper-slide {
+  flex: 0 0 auto;
+}
+
+.mediacal-swiper .swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mediacal-swiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.mediacal-swiper .swiper-wrapper.more-than-four {
+  margin-left: 18rem;
+} */

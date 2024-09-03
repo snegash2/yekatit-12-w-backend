@@ -1,0 +1,2074 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+<link rel="stylesheet" href="{% static 'css/accordion.css' %}" />
+
+      <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <span class="text-white">Clinical services</span>
+                <h1 class="text-capitalize mb-5 text-lg">All Services</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      
+    
+        </head>
+        <body>
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Tab1')">Clinical Service</button>
+          <button class="tablinks" onclick="openTab(event, 'Tab2')">Diagnostic Service</button>
+          <button class="tablinks" onclick="openTab(event, 'Tab3')">Others</button>
+          <!-- Add more buttons for additional tabs -->
+        </div>
+        
+        <div id="Tab1" class="tabcontent">
+            <h3>Clinical Service</h3>
+            <!-- Accordions for Clinical Service -->
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Anesthesia and critical care</button>
+              <div class="accordion-content">
+                <p>
+                  Anesthesia and Critical Care Services at Yekatit 12 Hospital Medical College is proud to offer 
+                  comprehensive anesthesia and critical care services, ensuring patient comfort, safety, and 
+                  optimal outcomes during surgical procedures and in critical medical situations. Our highly 
+                  skilled team of anesthesiologists and critical care specialists is dedicated to providing 
+                  exceptional care and utilizing advanced techniques and technologies.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our anesthesia and critical care services are 
+                  delivered with utmost professionalism, expertise, and compassion. We prioritize patient 
+                  safety, comfort, and optimal outcomes, ensuring that each patient receives exceptional 
+                  care throughout their surgical journey and during critical medical situations.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/anesthesia3.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/anesthesia2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Anesthesia and critical care -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Board clinic</button>
+              <div class="accordion-content">
+                <p>
+                  Board Clinic at Yekatit 12 Hospital Medical College is pleased to offer a 
+                  comprehensive Board Clinic, providing specialized medical services and 
+                  consultations by highly qualified and experienced physicians in various 
+                  medical specialties. Our Board Clinic is designed to cater to the 
+                  specific healthcare needs of patients seeking expert opinions, second 
+                  opinions, or ongoing management of chronic conditions.
+                </p>
+                <p>
+                  Our Board Clinic is staffed by renowned medical specialists who are 
+                  board-certified in their respective fields. We have a diverse team 
+                  of specialists representing various disciplines, including internal 
+                  medicine, cardiology, gastroenterology, neurology, dermatology, 
+                  endocrinology, and more. Our physicians bring extensive knowledge 
+                  and expertise to provide accurate diagnoses, personalized treatment 
+                  plans, and ongoing management of complex medical conditions.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+                
+                  <!-- Add more images for Board clinic -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Burn unit</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Burn Unit at Yekatit 12 Hospital Medical College, 
+                  where we provide specialized care and comprehensive treatment 
+                  for patients with severe burn injuries. Our state-of-the-art 
+                  burn unit is staffed by a highly skilled and compassionate 
+                  team of burn specialists, nurses, therapists, and support 
+                  staff, dedicated to delivering the highest quality care to 
+                  our patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College Burn Unit, we are 
+                  dedicated to delivering exceptional care, promoting healing, 
+                  and restoring quality of life for our burn patients. 
+                  Our commitment to excellence, along with our patient-centered 
+                  approach, ensures that each patient receives the highest 
+                  standard of care throughout their burn treatment and recovery.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/burn1.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/burn2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Burn unit -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Cardiology</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Cardiology Department at Yekatit 12 Hospital Medical College. 
+                  Our dedicated team of cardiologists and cardiac healthcare professionals is 
+                  committed to providing comprehensive care for patients with cardiovascular 
+                  conditions. We offer a wide range of diagnostic services, advanced treatments, 
+                  and personalized management plans to promote heart health and enhance 
+                  overall well-being.
+                </p>
+                <p>
+                  Our team consists of highly skilled cardiologists who specialize in diagnosing
+                  and treating various cardiovascular conditions. They are experienced in 
+                  managing coronary artery disease, heart failure, arrhythmias, valvular heart 
+                  diseases, congenital heart defects, and other cardiac conditions. 
+                  Our cardiologists stay up-to-date with the latest research and advancements 
+                  in the field to provide the highest level of care.
+                </p>
+                <p>
+                  We offer a comprehensive range of diagnostic tests and imaging services 
+                  to evaluate heart health. These include electrocardiograms (ECGs), 
+                  echocardiograms and stress tests. These tests help us accurately 
+                  diagnose and assess the severity of cardiovascular conditions.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Cardiology Department 
+                  is dedicated to delivering exceptional care for patients with 
+                  cardiovascular conditions. We strive to provide accurate diagnoses, 
+                  advanced treatment options, and ongoing support to promote heart 
+                  health and improve quality of life.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Cardiology -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Cardiothoracic surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Cardiothoracic Surgery Department at Yekatit 12 Hospital Medical College. 
+                  Our highly skilled team of cardiothoracic surgeons and specialized healthcare 
+                  professionals is committed to providing comprehensive care for patients with 
+                  cardiovascular and thoracic conditions. We offer advanced surgical interventions, 
+                  cutting-edge technology, and personalized treatment plans to promote cardiac and 
+                  thoracic health.
+                </p>
+                <p>
+                  Our team consists of experienced cardiothoracic surgeons who have undergone 
+                  specialized training in the diagnosis and management of conditions affecting 
+                  the heart, lungs, and chest cavity. They possess extensive expertise in 
+                  performing complex surgical procedures and utilize the latest advancements 
+                  in the field to ensure optimal outcomes for patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Cardiothoracic Surgery Department 
+                  is dedicated to delivering exceptional care for patients with cardiovascular 
+                  and thoracic conditions. We strive to provide accurate diagnoses, advanced 
+                  surgical interventions, and comprehensive support to enhance cardiac and thoracic health.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/cardiothoracic-surgery.jpeg' %}" alt="Image 1">    
+                  <img src="{% static 'images/clinical-service/cardiothoracic-surgery2.jpeg' %}" alt="Image 1">                                
+                  <!-- Add more images for Cardiothoracic surgery -->
+                </div>
+                   </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Community service</button>
+              <div class="accordion-content">
+                <p>
+                  Community Service at Yekatit 12 Hospital Medical College is deeply committed to 
+                  serving our community beyond the walls of our hospital. We believe in actively 
+                  engaging with the community, addressing healthcare needs, promoting health 
+                  education, and fostering partnerships for the betterment of the society we serve.
+                </p>
+                <p>
+                  Yekatit 12 Hospital Medical College actively engages in community-based research 
+                  and health initiatives. We collaborate with academic institutions, research 
+                  organizations, and community stakeholders to conduct studies, gather data, 
+                  and implement evidence-based interventions. Through research and community 
+                  health initiatives, we strive to identify healthcare challenges, develop 
+                  innovative solutions, and contribute to the overall improvement of community health.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our community services reflect our 
+                  commitment to making a positive impact on the health and well-being of the 
+                  community we serve. Through health camps, education programs, collaborations, 
+                  and specialized initiatives, we strive to reach individuals and populations 
+                  in need and promote a healthier and more resilient community.
+                </p>
+                <p>
+                  We offer specialized programs for the management of chronic diseases such as diabetes, 
+                  hypertension, asthma, and heart disease. Our healthcare professionals work 
+                  closely with patients to develop personalized care plans, including medication 
+                  management, lifestyle modifications, and regular monitoring. Our goal is to 
+                  optimize disease control, prevent complications, and enhance the quality of 
+                  life for individuals with chronic conditions.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our community service is 
+                  designed to provide comprehensive, patient-centered care to individuals and 
+                  families. Through our preventive approach, personalized care plans, and 
+                  community engagement, we strive to improve the health and well-being of 
+                  our community members.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/cs.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/cs2.jpeg' %}" alt="Image 23">
+               
+                  <!-- Add more images for Community services -->
+                </div>
+                    </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Dentistry</button>
+              <div class="accordion-content">
+                <p>
+                  Dentistry is a branch of medicine that focuses on the health, diagnosis, 
+                  prevention, and treatment of conditions affecting the oral cavity and 
+                  its surrounding structures. Dental care plays a crucial role in 
+                  maintaining oral health and overall well-being. At Yekatit 12 Hospital 
+                  Medical College, we offer comprehensive dental services provided by a 
+                  team of skilled dentists and oral health professionals.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, we prioritize patient comfort, 
+                  safety, and satisfaction. Our dental professionals are dedicated to 
+                  providing quality care using the latest techniques and equipment. 
+                  We strive to create a welcoming environment where patients feel 
+                  at ease during their dental visits.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+               
+                  <!-- Add more images for Dental -->
+                </div>
+                    </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Dermatology</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Dermatology Department at Yekatit 12 Hospital Medical College. 
+                  Our team of experienced dermatologists and skincare professionals is dedicated 
+                  to providing comprehensive and specialized care for various dermatological 
+                  conditions. We offer a wide range of diagnostic, therapeutic, and cosmetic 
+                  services to promote skin health and enhance the well-being of our patients.
+                </p>
+                <p>
+                  Our department is staffed with highly skilled dermatologists who have 
+                  extensive experience in diagnosing and treating a wide range of skin 
+                  conditions. They stay updated with the latest advancements in dermatology 
+                  and are proficient in managing disorders such as acne, eczema, psoriasis, 
+                  skin infections, allergic reactions, skin cancer, and other dermatological conditions.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Dermatology Department is committed to 
+                  delivering exceptional care for patients with dermatological conditions. 
+                  We strive to provide accurate diagnoses, effective treatments, and 
+                  personalized care to promote skin health and enhance the overall well-being of our patients.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/Dermatology.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/Dermatology2.jpeg' %}" alt="Image 23">
+                 
+                  <!-- Add more images for Dermatology -->
+                </div>
+                    </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Emergency care</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Emergency Department at Yekatit 12 Hospital Medical College. 
+                  Our Emergency Care Department is committed to providing immediate and 
+                  comprehensive medical care to patients in need of urgent medical attention. 
+                  Our highly skilled healthcare professionals, including emergency physicians, 
+                  nurses, and support staff, are available 24/7 to deliver prompt and 
+                  effective emergency care.
+                </p>
+                <p>
+                  Our department is staffed with experienced emergency physicians who have 
+                  expertise in managing a wide range of medical emergencies. They are 
+                  trained to assess and stabilize patients with acute illnesses, injuries, 
+                  or trauma. Our physicians work collaboratively to provide accurate diagnoses, 
+                  timely interventions, and appropriate treatment plans.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Emergency Care Department is 
+                  dedicated to providing immediate and comprehensive medical care for patients 
+                  in need of urgent attention. We are committed to delivering prompt, efficient 
+                  and high-quality emergency care in a compassionate and patient-centered manner.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/emergency.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/emergency2.jpeg' %}" alt="Image 23">
+                 
+                  <!-- Add more images for Emergency care -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Endocrine and metabolism</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Endocrine and Metabolism Department at Yekatit 12 Hospital Medical College. 
+                  Our specialized team of endocrinologists and metabolic specialists is dedicated to 
+                  providing comprehensive care for patients with endocrine disorders and metabolic 
+                  conditions. We offer advanced diagnostic services, evidence-based treatments, 
+                  and personalized management plans to promote optimal hormonal balance and metabolic health.
+                </p>
+                <p>
+                  Our team consists of experienced endocrinologists who have undergone specialized 
+                  training in the diagnosis and management of endocrine disorders. They are highly 
+                  skilled in evaluating and treating conditions related to the thyroid, parathyroid, 
+                  adrenal glands, pituitary gland, pancreas, and other endocrine organs.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Endocrine and Metabolism Department 
+                  is committed to providing patient-centered care, utilizing advanced diagnostic 
+                  techniques, evidence-based treatments, and a multidisciplinary approach. We 
+                  strive to optimize hormonal balance, metabolic health, and overall well-being 
+                  for our patients.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/bg-2.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/bg-2.jpg' %}" alt="Image 23">
+                 
+                  <!-- Add more images for Endocrine and metabolism -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Endocrine surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Endocrine Surgery Department at Yekatit 12 Hospital Medical College. 
+                  Our highly specialized team of endocrine surgeons is dedicated to providing 
+                  comprehensive care for patients with disorders of the endocrine system. 
+                  We offer advanced diagnostic techniques, precise surgical interventions, 
+                  and personalized treatment plans to effectively manage conditions affecting 
+                  the thyroid, parathyroid, adrenal glands, and other endocrine organs.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Endocrine Surgery Department is 
+                  dedicated to delivering exceptional care for patients with endocrine disorders. 
+                  We strive to provide accurate diagnoses, precise surgical interventions, and 
+                  comprehensive follow-up care to help patients achieve optimal health and well-being.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/endocrine-surgery.png' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/endocrine-surgery2.png' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Endocrine surgery -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">ENT</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Ear, Nose, and Throat (ENT) Department at Yekatit 12 
+                  Hospital Medical College. Our dedicated team of ENT specialists, 
+                  also known as otolaryngologists, provides comprehensive care for 
+                  a wide range of conditions affecting the ears, nose, throat, 
+                  head, and neck. We are committed to delivering exceptional 
+                  medical care, utilizing advanced diagnostic tools and 
+                  evidence-based treatments.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our ENT department is 
+                  dedicated to delivering patient-centered care, utilizing 
+                  advanced technology, and staying at the forefront of medical 
+                  advancements in the field of otolaryngology. We are committed 
+                  to improving the quality of life for our patients by effectively 
+                  managing their ENT conditions.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/ent.jpeg' %}" alt="Image 1">
+                  <!-- <img src="images/bg/22.jpg" alt="Image 23"> -->
+               
+                  <!-- Add more images for ENT -->
+                </div>
+                  </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Gastro-intestine</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Gastrointestinal (GI) Department at Yekatit 12 Hospital Medical 
+                  College. Our dedicated team of gastroenterologists and gastrointestinal surgeons 
+                  is committed to providing comprehensive care for patients with disorders of the 
+                  digestive system. We offer a wide range of diagnostic services, minimally 
+                  invasive procedures, and personalized treatment plans to promote digestive 
+                  health and well-being.
+                </p>
+                <p>
+                  Our team consists of highly skilled gastroenterologists who specialize in 
+                  diagnosing and treating disorders of the gastrointestinal tract. They 
+                  have extensive experience in the management of conditions such as 
+                  gastroesophageal reflux disease (GERD), peptic ulcers, inflammatory 
+                  bowel disease (IBD), irritable bowel syndrome (IBS), liver diseases, 
+                  and pancreatic disorders.
+                </p>
+                <p>
+                  We utilize advanced diagnostic techniques to accurately assess 
+                  gastrointestinal conditions. Our department is equipped with 
+                  state-of-the-art endoscopy and imaging equipment, including 
+                  upper endoscopy and colonoscopy. These procedures allow for 
+                  precise visualization and tissue sampling, aiding in the 
+                  diagnosis and staging of various GI disorders.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Cardiothoracic surgery -->
+                </div>
+                   </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">General surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Our General Surgery Department is dedicated to providing exceptional surgical 
+                  care to our patients. Led by a team of highly skilled and experienced general 
+                  surgeons and subspecialists, we offer a comprehensive range of surgical services 
+                  to address various medical conditions.
+                  Our surgeons are experts in performing a wide array of surgical procedures, 
+                  specializing in surgeries involving the abdomen, digestive tract, endocrine system, 
+                  breast, skin, soft tissues, and other organs. With their extensive training and expertise, 
+                  they are committed to delivering the highest standard of care and achieving optimal 
+                  outcomes for our patients.
+                </p>
+                <p>
+                  At our facility, we prioritize patient safety, comfort, and well-being. We understand that 
+                  undergoing surgery can be a stressful experience, and our compassionate team is here to 
+                  support you every step of the way. From the initial consultation to postoperative care, 
+                  we strive to provide personalized attention, clear communication, and thorough 
+                  explanations of your treatment options.
+                </p>
+                <p>
+                  Our General Surgery Department is equipped with state-of-the-art technology and 
+                  advanced surgical techniques to ensure precise and minimally invasive procedures 
+                  whenever possible. We are proud to offer the latest advancements in surgical innovation, 
+                  including laparoscopic surgeries.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/surgery.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/surgery2.jpg' %}" alt="Image 23">
+              
+                  <!-- Add more images for General surgery -->
+                </div>
+                
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Gynecology and obstetrics</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to our Gynecology and Obstetrics Department!
+                </p>
+                <p>
+                  Our Gynecology and Obstetrics Department is dedicated to providing comprehensive and 
+                  compassionate care for women throughout their reproductive health journey. We understand 
+                  the unique needs and concerns of women, and our team of experienced gynecologists and 
+                  obstetricians is here to support you at every stage of life. Our gynecologists specialize 
+                  in the diagnosis, treatment, and management of various gynecological conditions. 
+                  Whether you require routine preventive care, have concerns about reproductive health, 
+                  or need treatment for a specific gynecological issue, our team is here to provide expert 
+                  guidance and personalized care. Our obstetricians also specialize in providing comprehensive 
+                  prenatal, childbirth, and postnatal care to ensure a healthy pregnancy and a positive birthing 
+                  experience. We are dedicated to supporting you and your growing family throughout this 
+                  joyous journey
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Gynecology and obstetrics -->
+                </div>
+                    </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Hepatobiliary surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Hepatobiliary surgery is a specialized surgical field that focuses on the treatment of 
+                  diseases and conditions affecting the liver, gallbladder, bile ducts, and pancreas. 
+                  At Yekatit 12 Hospital Medical College, our highly skilled and experienced surgeons 
+                  perform a wide range of hepatobiliary procedures using advanced techniques and 
+                  state-of-the-art equipment. We specialize in laparoscopic and robotic-assisted 
+                  procedures, which involve smaller incisions, reduced scarring, and quicker recovery 
+                  times compared to traditional open surgery.
+                </p>
+                <p>
+                  Our hepatobiliary surgery department is dedicated to providing comprehensive care 
+                  for patients with various conditions, including liver tumors, gallstones, biliary 
+                  strictures, pancreatic diseases, and liver transplantation. We offer a multidisciplinary 
+                  approach to ensure the best possible outcomes for our patients.
+                </p>
+                <p>
+                  Our team of hepatobiliary surgeons, anesthesiologists, nurses, and support staff work 
+                  collaboratively to deliver personalized treatment plans tailored to each patient's unique 
+                  needs. We utilize the latest advancements in minimally invasive techniques, such as 
+                  laparoscopic and robotic-assisted surgeries, whenever appropriate. These techniques 
+                  offer several benefits, including smaller incisions, reduced postoperative pain, 
+                  shorter hospital stays, and quicker recovery times.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/Hepatobiliary-surgery.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/hepatobiliary-surgery2.png' %}" alt="Image 23" style="height:340px;">
+                 
+                  <!-- Add more images for Hepatobiliary surgery -->
+                </div>
+                   </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">ICU care (NICU, PICU, AICU)</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Intensive Care Unit (ICU) at Yekatit 12 Hospital Medical College. Our ICU 
+                  provides specialized and comprehensive care for critically ill patients, including Neonatal 
+                  Intensive Care Unit (NICU), Pediatric Intensive Care Unit (PICU), and Adult Intensive Care 
+                  Unit (AICU). Our dedicated team of highly skilled healthcare professionals is committed 
+                  to delivering exceptional critical care, utilizing advanced technologies, and ensuring 
+                  the best possible outcomes for our patients.
+                </p>
+                <p>
+                  Our ICU is staffed with a multidisciplinary team of intensivists, critical care nurses, 
+                  respiratory therapists, pharmacists, and other specialized healthcare professionals. 
+                  Our team works collaboratively to provide round-the-clock care, ensuring continuous 
+                  monitoring, timely interventions, and prompt response to any emergencies.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our ICU Care, including the NICU, PICU, and AICU, 
+                  is dedicated to providing specialized and compassionate critical care for patients of all ages. 
+                  We are committed to delivering the highest standard of medical expertise, utilizing advanced 
+                  technologies, and ensuring the best possible outcomes for our patients and their families.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/icu.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/icu2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for ICU care -->
+                </div>
+                   </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Infertility clinic</button>
+              <div class="accordion-content">
+                <p>
+                  Coming soon...
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Infertility clinic -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Internal medicine</button>
+              <div class="accordion-content">
+                <p>Our internal medicine department is proud to have a team of 
+                  highly specialized physicians who are experts in their respective 
+                  fields. With their extensive training in specialty and sub-specialty
+                  and expertise, they are able to provide exceptional and highly qualified 
+                  medical care to our patients. We prioritize offering comprehensive care to our
+                  patients, which means that we address not only their immediate medical needs but 
+                  also consider their overall well-being. Our approach encompasses a holistic 
+                  understanding of our patients conditions, taking into account their medical history, 
+                  lifestyle factors, and individual circumstances. This enables us to develop 
+                  personalized treatment plans that best meet their specific needs.
+                </p>
+                <p>
+                  We strive to deliver top-quality care by staying up-to-date with the 
+                  latest advancements in medical research, technology, and best practices. 
+                  Our physicians are committed to continuous learning and professional 
+                  development to ensure that they provide the highest standard of care to our patients.
+                </p>
+                <p>
+                  Furthermore, we emphasize the importance of compassionate care. We understand that 
+                  medical conditions can be challenging and stressful for patients and their families. 
+                  Our medical team is dedicated to providing support, empathy, and clear communication 
+                  throughout the treatment process, ensuring that our patients feel heard, respected, 
+                  and involved in their own care.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/internal-medicine.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/internal-medicine2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Internal medicine -->
+                </div>
+             
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Maxillofacial Surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Maxillofacial surgery, also known as oral and maxillofacial surgery (OMS), is a specialized
+                   surgical field that focuses on the diagnosis, treatment, and management of conditions 
+                   affecting the face, jaw, mouth, and associated structures. At Yekatit 12 Hospital 
+                   Medical College, our maxillofacial surgery department offers comprehensive care for 
+                   patients with a wide range of maxillofacial conditions.
+                </p>
+                <p>
+                  Our team of highly skilled and experienced maxillofacial surgeons, along with a 
+                  multidisciplinary team of dentists, orthodontists, anesthesiologists, nurses, and 
+                  support staff, work collaboratively to deliver personalized treatment plans tailored 
+                  to each patient's specific needs. We utilize advanced surgical techniques, 
+                  state-of-the-art equipment, and the latest medical advancements to ensure the best 
+                  at Yekatit 12 Hospital Medical College, patient safety and satisfaction are our 
+                  top priorities.
+                </p>
+                <p>
+                  We strive to provide compassionate, patient-centered care, ensuring optimal 
+                  outcomes for our patients undergoing maxillofacial surgery. Our surgeons are 
+                  dedicated to continuous learning and stay updated with the latest advancements 
+                  in the field to deliver the highest quality of care. possible outcomes for our patients
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/maxillofacial.png' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/maxillofacial2.png' %}" alt="Image 23">
+           
+                  <!-- Add more images for Maxillofacial Surgery -->
+                </div>
+                    </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Nephrology</button>
+              <div class="accordion-content">
+                <p>
+                  Nephrology is a medical specialty that focuses on the diagnosis, treatment, 
+                  and management of diseases and conditions related to the kidneys and urinary 
+                  system. Nephrologists are medical doctors who specialize in kidney care and 
+                  are trained to evaluate, diagnose, and treat various kidney disorders.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our nephrology department offers 
+                  comprehensive services for patients with kidney-related conditions. Our 
+                  team of nephrologists, along with other healthcare professionals, work 
+                  together to provide personalized care and support for patients with kidney diseases.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/Nephro.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/Nephro2.jpeg' %}" alt="Image 23">
+               
+                  <!-- Add more images for Nephrology -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Neurology</button>
+              <div class="accordion-content">
+                <p>
+                  Neurology is a medical specialty that focuses on the diagnosis, treatment, 
+                  and management of conditions affecting the nervous system. Neurologists 
+                  are physicians who specialize in neurology and are trained to evaluate, 
+                  diagnose, and provide non-surgical treatment options for various neurological 
+                  disorders. At Yekatit 12 Hospital Medical College, our neurology department 
+                  offers comprehensive care for patients with a wide range of neurological conditions.
+                </p>
+                <p>
+                  Our team of skilled neurologists, along with a dedicated multidisciplinary team of 
+                  healthcare professionals, works together to provide personalized care tailored to 
+                  each patient's specific needs. We utilize advanced diagnostic techniques and 
+                  state-of-the-art equipment to accurately diagnose and effectively manage 
+                  neurological disorders.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our neurology department is committed 
+                  to providing compassionate, evidence-based care to improve the quality of life 
+                  for patients with neurological disorders. Our neurologists stay up-to-date with 
+                  the latest advancements in the field and work collaboratively with other departments 
+                  to ensure comprehensive care for our patients.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/neurology.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/neurology2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Neurology -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Oncology</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Oncology Department at Yekatit 12 Hospital Medical College. 
+                  Our dedicated team of oncologists and healthcare professionals is committed 
+                  to providing comprehensive and compassionate care for individuals affected 
+                  by cancer. We offer a wide range of services, from early detection and 
+                  diagnosis to personalized treatment plans and supportive care.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, we are dedicated to providing the 
+                  highest standard of care for individuals affected by cancer. Our oncology 
+                  department combines expertise, advanced technology, and a patient-centered 
+                  approach to deliver comprehensive cancer care throughout the entire treatment journey.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/oncology.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/oncology2.jpeg' %}" alt="Image 23">
+              
+                  <!-- Add more images for Oncology -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Ophthalmology</button>
+              <div class="accordion-content">
+                <p>
+                  Ophthalmology is a medical specialty that focuses on the diagnosis, treatment, 
+                  and management of diseases and disorders related to the eyes and visual system. 
+                  Ophthalmologists are medical doctors who specialize in the prevention, diagnosis, 
+                  and medical or surgical treatment of eye conditions. They provide comprehensive 
+                  eye care, ranging from routine eye examinations to complex surgical procedures.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our ophthalmology department offers a 
+                  wide range of services to address various eye conditions. Our team of 
+                  ophthalmologists, along with highly trained optometrists and ophthalmic 
+                  technicians, work together to deliver high-quality eye care.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/ophthalmology.png' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/ophthalmology2.png' %}" alt="Image 23">
+                
+                  <!-- Add more images for Ophthalmology -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Orthodontics</button>
+              <div class="accordion-content">
+                <p>
+                  Orthodontics is a specialized field of dentistry that focuses on the 
+                  diagnosis, prevention, and treatment of dental and facial irregularities. 
+                  Orthodontists are dental professionals who specialize in correcting 
+                  misaligned teeth, improper bites (malocclusions), and jaw discrepancies. 
+                  Through various orthodontic treatments, they aim to improve both the 
+                  function and aesthetics of the teeth and jaws.
+                </p>
+                <p>
+                  Orthodontic treatment requires careful planning, regular monitoring, 
+                  and collaboration between the orthodontist and patient. The duration 
+                  of treatment varies depending on the complexity of the case and the 
+                  specific treatment modality chosen.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, we are committed to providing 
+                  high-quality orthodontic care in a comfortable and patient-centered 
+                  environment. Our orthodontists stay updated with the latest advancements 
+                  in the field and utilize state-of-the-art technology to achieve optimal results.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 1">
+                  <img src="{% static 'images/bg/22.jpg' %}" alt="Image 23">
+                
+                  <!-- Add more images for Orthodontics -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Orthopedics</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Orthopedics Department at Yekatit 12 Hospital Medical College. 
+                  Our dedicated team of orthopedic specialists is committed to providing 
+                  exceptional care for a wide range of musculoskeletal conditions and injuries. 
+                  We offer comprehensive services, including diagnosis, treatment, and 
+                  rehabilitation, to help patients regain mobility, alleviate pain, and 
+                  improve their overall musculoskeletal health.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Orthopedics Department is 
+                  dedicated to delivering patient-centered care, utilizing the latest 
+                  advancements in orthopedic treatments and surgical techniques. 
+                  We strive to provide comprehensive musculoskeletal care, tailored 
+                  to the unique needs of each patient, with a focus on improving 
+                  quality of life and restoring optimal function.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/ortho.png' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/ortho2.jpeg' %}" alt="Image 23">
+                 
+                  <!-- Add more images for Orthopedics -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Pediatrics and child health</button>
+              <div class="accordion-content">
+                <p>
+                  At our Pediatrics and Child Health Department, we are dedicated to providing comprehensive 
+                  and compassionate care for infants, children, and adolescents. We understand the unique 
+                  needs of young patients and their families, and our team of experienced pediatricians 
+                  and healthcare professionals is committed to ensuring the health and well-being of every child.
+                </p>
+                <p>
+                  Our department offers a wide range of services tailored to meet the diverse needs of children 
+                  at various stages of their development. We provide preventive care, early detection and 
+                  management of illnesses, and ongoing support to promote healthy growth and development.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/child-health.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/child-health2.jpeg' %}" alt="Image 23">
+               
+                  <!-- Add more images for Pediatrics and child health -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Pediatrics surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Pediatric Surgery Department at Yekatit 12 Hospital Medical College. 
+                  Our compassionate team of pediatric surgeons and specialized healthcare professionals 
+                  is dedicated to providing comprehensive and specialized care for infants, children, 
+                  and adolescents requiring surgical treatment. We offer a range of surgical 
+                  interventions, advanced techniques, and personalized care to promote the health 
+                  and well-being of our young patients.
+                </p>
+                <p>
+                  Our team comprises highly skilled pediatric surgeons who specialize in diagnosing
+                   and treating surgical conditions in children. They have extensive experience in 
+                   managing a wide range of pediatric surgical conditions, including congenital 
+                   anomalies, abdominal and thoracic disorders, pediatric tumors, trauma, and 
+                   urological conditions. Our surgeons are dedicated to providing the best 
+                   possible surgical outcomes while prioritizing the comfort and safety of 
+                   our young patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Pediatric Surgery Department 
+                  is dedicated to delivering exceptional care for children requiring surgical 
+                  treatment. We strive to provide accurate diagnoses, advanced surgical 
+                  interventions, and comprehensive support to promote the health and 
+                  well-being of our young patients.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/pediatrics.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/pediatric-surgery.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Pediatrics surgery -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Physiotherapy</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Physiotherapy Department at Yekatit 12 Hospital Medical College. 
+                  Our dedicated team of physiotherapists is committed to providing exceptional 
+                  care and rehabilitation services to help individuals regain mobility, 
+                  manage pain, and improve overall physical function. We offer a wide 
+                  range of evidence-based treatments and therapies to address various 
+                  musculoskeletal, neurological, and cardiopulmonary conditions.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our physiotherapy department 
+                  is dedicated to providing patient-centered care, utilizing evidence-based 
+                  practices, and promoting a multidisciplinary approach to rehabilitation. 
+                  We work closely with patients, their families, and other healthcare 
+                  professionals to optimize outcomes and help individuals achieve their 
+                  functional goals. Whether you require rehabilitation after an injury, 
+                  assistance with a chronic condition, or support in managing a 
+                  neurological disorder, our skilled physiotherapists are here to 
+                  guide you on your journey to recovery and improved physical well-being.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/physiotherapy.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/physiotherapy2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Physiotherapy -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Plastic and reconstructive surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Plastic and reconstructive surgery is a surgical specialty that focuses on restoring, repairing, and 
+                  enhancing the function and appearance of various parts of the body. Plastic surgeons are medical 
+                  doctors who undergo specialized training to perform a wide range of surgical procedures to 
+                  address both cosmetic and reconstructive needs.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our plastic and reconstructive surgery department offers 
+                  comprehensive services to patients seeking aesthetic enhancements, reconstructive procedures, and 
+                  corrective surgeries.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our plastic and reconstructive surgery department is 
+                  committed to providing safe, effective, and personalized care to our patients. We prioritize 
+                  patient satisfaction, natural-looking results, and the highest standards of surgical excellence.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/plastic-surgery.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/plastic-surgery2.jpeg' %}" alt="Image 1" style="height:340px;">
+                  
+                  <!-- Add more images for Plastic and reconstructive surgery -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Private wing service</button>
+              <div class="accordion-content">
+                <p>
+                  Private Wing Services at Yekatit 12 Hospital Medical College offers exceptional private 
+                  wing services for individuals seeking personalized and exclusive healthcare experiences. 
+                  Our private wing is designed to provide a comfortable and luxurious environment 
+                  while ensuring the highest standards of medical care. The private wing starts 
+                  working after 5:00PM in all working days.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our private wing services provide an 
+                  exclusive and personalized healthcare experience, combining exceptional 
+                  medical care with luxurious amenities. We strive to exceed our patients' 
+                  expectations, delivering a seamless and comfortable journey towards 
+                  health and wellness.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/private-wing.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/private-wing2.jpeg' %}" alt="Image 23">
+                 
+                  <!-- Add more images for Private wing service -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Psychiatry</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Psychiatry Department at Yekatit 12 Hospital Medical College. 
+                  Our dedicated team of psychiatrists, psychologists, and mental healthcare 
+                  professionals is committed to providing comprehensive and compassionate 
+                  care for individuals experiencing mental health concerns. We offer a 
+                  range of diagnostic, therapeutic, and rehabilitative services to 
+                  promote mental well-being and improve the quality of life for our patients.
+                </p>
+                <p>
+                  Our team consists of experienced psychiatrists who specialize in the diagnosis, 
+                  treatment, and management of mental health disorders. They are supported by a 
+                  multidisciplinary team of psychologists, psychiatric nurses, and social workers, 
+                  all trained in delivering high-quality mental healthcare.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our Psychiatry Department is dedicated to provide 
+                  compassionate and evidence-based care for individuals facing mental health challenges. 
+                  We strive to create a supportive and non-judgmental environment where patients can 
+                  find the help they need to achieve mental well-being and lead fulfilling lives.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/psychiatry.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/psychiatry2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Psychiatry -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Quality and Innovation</button>
+              <div class="accordion-content">
+                <p>
+                  Quality and Innovation at Yekatit 12 Hospital Medical College, we are dedicated to 
+                  providing exceptional healthcare services with a strong focus on quality, 
+                  innovation, and continuous improvement. Our commitment to excellence is 
+                  evident in every aspect of our operations, from patient care to medical 
+                  education and research.
+                </p>
+                <p>
+                  Our hospital is staffed with highly qualified healthcare quality professionals 
+                  who are experts in their respective fields. Our physicians, nurses, technicians, 
+                  and support staff undergo rigorous training and education to stay updated with 
+                  the latest medical advancements and provide the highest quality of care to 
+                  our patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, we are committed to providing 
+                  high-quality healthcare services while embracing innovation and advancing 
+                  medical knowledge. Our focus on quality, patient-centered care, and 
+                  continuous improvement sets us apart and ensures that our patients 
+                  receive the best possible care in a safe and compassionate environment.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/quality2.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/quality.jpeg' %}" alt="Image 23">
+                
+                  <!-- Add more images for Quality assurance -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Speech Therapy</button>
+              <div class="accordion-content">
+                <p>
+                  Welcome to the Speech Therapy Department at Yekatit 12 Hospital Medical College. 
+                  Our dedicated team of speech-language pathologists is committed to providing 
+                  high-quality assessment, diagnosis, and treatment for individuals of all ages 
+                  who experience communication and swallowing disorders. We strive to enhance 
+                  communication skills, promote independence, and improve overall quality of 
+                  life for our patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, we are dedicated to providing 
+                  compassionate care and personalized therapy plans tailored to the 
+                  unique needs of each individual. Our speech-language pathologists 
+                  employ evidence-based practices, state-of-the-art technology, and 
+                  a collaborative approach to help our patients achieve their 
+                  communication and swallowing goals.
+                </p>
+                <p>
+                  We welcome patients of all ages and offer services in both outpatient 
+                  and inpatient settings. If you or a loved one is in need of speech 
+                  therapy, please contact our department or visit our official website 
+                  for more information on our services and how to schedule an appointment.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/speech-therapy.jpeg' %}" alt="Image 1">
+               
+                  <!-- Add more images for Speech therapy -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">TB/HIV care</button>
+              <div class="accordion-content">
+                <p>
+                  TB/HIV Care at Yekatit 12 Hospital Medical College is committed to providing 
+                  comprehensive care and support for individuals living with tuberculosis (TB) and HIV. 
+                  Our specialized TB/HIV care program focuses on early diagnosis, treatment, and 
+                  management of both diseases, ensuring the best possible outcomes for our patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our TB/HIV care program is designed to 
+                  provide comprehensive and compassionate care for individuals affected by these 
+                  diseases. Through our integrated approach, highly skilled healthcare 
+                  professionals, and commitment to research and innovation, we strive 
+                  to make a positive impact on the lives of our patients and the broader community.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/hiv.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/hiv2.jpeg' %}" alt="Image 23">
+                  
+                </div>
+                   </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">Urological Surgery</button>
+              <div class="accordion-content">
+                <p>
+                  Urological surgery is a specialized surgical field that focuses on the diagnosis, 
+                  treatment, and management of conditions affecting the urinary tract system and 
+                  male reproductive organs. At Yekatit 12 Hospital Medical College, our urological 
+                  surgery department offers comprehensive care for patients with a wide range of 
+                  urological conditions.
+                </p>
+                <p>
+                  Our team of highly skilled and experienced urological surgeons, along with a 
+                  multidisciplinary team of urologists, radiologists, anesthesiologists, nurses, 
+                  and support staff, work collaboratively to deliver personalized treatment plans 
+                  tailored to each patient's specific needs. We utilize advanced surgical techniques, 
+                  state-of-the-art equipment, and the latest medical advancements to ensure the 
+                  best possible outcomes for our patients.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, patient care and safety are our top 
+                  priorities. We strive to provide compassionate, evidence-based care, ensuring 
+                  optimal outcomes for our patients undergoing urological surgery. Our surgeons 
+                  are dedicated to continuous learning and stay updated with the latest advancements 
+                  in the field to deliver the highest quality of care.
+                </p>
+                <div class="accordion-img-grid">
+                  <img src="{% static 'images/clinical-service/urology.jpeg' %}" alt="Image 1">
+                  <img src="{% static 'images/clinical-service/urology2.jpeg' %}" alt="Image 23">
+                  
+                  <!-- Add more images for Urological Surgery -->
+                </div>
+                     </div>
+            </div>
+            <!-- Add more accordions -->
+            <!-- You can continue this pattern for more accordions -->
+          </div>
+        
+        <div id="Tab2" class="tabcontent">
+          <h3>Diagnostic Service</h3>
+          <!-- Accordions for Tab 2 -->
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Advanced laboratory</button>
+            <div class="accordion-content">
+               <p>
+                Welcome to the Laboratory Services at Yekatit 12 Hospital Medical College, where we provide 
+                comprehensive and reliable diagnostic and analytical services to support patient care, research, 
+                and education. Our laboratory is staffed with highly skilled professionals and equipped with 
+                advanced technologies to ensure accurate and timely results.
+                </p>
+                <p>
+                  <strong>Diagnostic Testing</strong>: We offer a wide range of diagnostic tests to aid in the diagnosis, monitoring, 
+                  and treatment of various medical conditions. From routine blood tests to specialized molecular 
+                  diagnostics, our laboratory is equipped to perform a diverse array of tests, including hematology, 
+                  biochemistry, microbiology, immunology, pathology, and more. Our experienced team of laboratory 
+                  scientists and technicians work efficiently to provide accurate test results to support 
+                  clinical decision-making.
+                </p>
+                <p>
+                  <strong>Advanced Technologies</strong>: We stay at the forefront of medical technology to deliver the highest quality laboratory 
+                  services. Our laboratory is equipped with cutting-edge instruments and platforms that enable us to perform 
+                  advanced testing with precision and efficiency. We continuously update our equipment and adopt new methodologies 
+                  to ensure that our laboratory remains at the forefront of diagnostic capabilities.
+                </p>
+                <p>
+                  <strong>Quality and Accuracy</strong>: We adhere to strict quality assurance protocols, ensuring that our laboratory services meet the 
+                  highest standards of accuracy and reliability. We implement rigorous quality control measures, participate in external 
+                  proficiency testing programs, and maintain a robust quality management system to continuously monitor and improve the 
+                  accuracy of our test results. Your trust and confidence in our laboratory services are of utmost importance to us.
+                </p>
+                <p>
+                  <strong>Timely Reporting</strong>: We understand the importance of timely reporting in healthcare. Our laboratory services are designed 
+                  to provide rapid turnaround times for test results without compromising accuracy. We strive to deliver test reports 
+                  promptly, enabling healthcare providers to make informed decisions and provide timely treatment to their patients.
+                </p>
+                <p>
+                  <strong>Research Support</strong>: Our laboratory services also extend to research support for the academic and scientific community. We collaborate 
+                  with researchers and provide specialized testing and analytical services for their studies. Our laboratory is equipped to handle a 
+                  wide range of research requirements, including sample processing, data analysis, and validation of research findings.
+                </p>
+                <p>
+                  <strong>Education and Training</strong>: As a medical college, we are committed to education and training. Our laboratory services play a vital role in 
+                  providing hands-on training opportunities for our students. Under the guidance of experienced faculty and laboratory professionals, 
+                  students gain valuable practical skills, understand laboratory procedures, and develop a comprehensive understanding of diagnostic techniques.
+                </p>
+                <p>
+                  <strong>Patient-Centered Approach</strong>: At Yekatit 12 Hospital Medical College, we prioritize patient care and well-being. Our laboratory services are 
+                  designed to provide accurate and reliable results that contribute to the overall patient care journey. We strive to ensure a seamless 
+                  experience for patients, with a focus on compassion, privacy, and confidentiality.
+                </p>
+                <p>
+                  At Yekatit 12 Hospital Medical College, our laboratory services are driven by a commitment to excellence, accuracy, and patient-centered 
+                  care. We continuously invest in advanced technologies, maintain stringent quality control measures, and foster a culture of continuous 
+                  improvement to deliver the highest quality laboratory services. Trust us with your diagnostic needs, and experience our reliable, 
+                  efficient, and comprehensive laboratory services.
+                </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/lab.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/lab2.jpeg' %}" alt="Image 12">
+                
+              </div>
+             
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Colonoscopy</button>
+            <div class="accordion-content">  
+              <p>
+                Welcome to the Colonoscopy Services at Yekatit 12 Hospital Medical College, where 
+                we provide comprehensive and advanced screening, diagnostic, and therapeutic 
+                procedures for the evaluation of the colon and rectum. Our team of experienced 
+                gastroenterologists and skilled technicians utilize state-of-the-art equipment 
+                to deliver accurate and high-quality colonoscopy services.
+              </p>
+              <p>
+                <strong>Colonoscopy</strong>: is a minimally invasive procedure that allows 
+                for direct visualization of the colon and rectum using a flexible, thin tube 
+                with a camera called a colonoscope. It is a gold standard procedure for the 
+                detection and diagnosis of various gastrointestinal conditions, including 
+                colorectal cancer, polyps, inflammatory bowel disease, and gastrointestinal 
+                bleeding. Colonoscopy is also used for therapeutic interventions such as 
+                polyp removal and tissue biopsies.
+              </p>
+              <p>
+                <strong>Advanced Equipment</strong>: Our colonoscopy department is equipped with 
+                advanced colonoscopes and supporting technologies to ensure optimal visualization 
+                and procedural success. Our equipment includes high-definition video colonoscopes 
+                and imaging systems that provide detailed and clear images of the colon. These 
+                technologies enhance our ability to detect abnormalities and perform precise 
+                interventions when necessary.
+              </p>
+              <p>
+                <strong>Comprehensive Colonoscopy Services</strong>: We offer a comprehensive range of 
+                colonoscopy services to meet the diverse needs of our patients. These include 
+                screening colonoscopy for early detection of colorectal cancer, diagnostic 
+                colonoscopy for evaluation of gastrointestinal symptoms, and therapeutic 
+                colonoscopy for the removal of polyps or the treatment of other conditions. 
+                Our team tailors the procedure to each patient's specific requirements, 
+                ensuring personalized and effective care.
+              </p>
+              <p>
+                <strong>Experienced Gastroenterologists</strong>: Our team of experienced gastroenterologists 
+                specializes in performing colonoscopies and has extensive knowledge of gastrointestinal 
+                conditions. They possess the expertise to interpret colonoscopic findings accurately, 
+                diagnose conditions, and recommend appropriate treatment plans. Our gastroenterologists 
+                prioritize patient comfort and safety throughout the procedure, providing a compassionate 
+                and supportive environment.
+              </p>
+              <p>
+                <strong>Sedation and Comfort</strong>: We understand that undergoing a colonoscopy can cause anxiety 
+                or discomfort for some patients. To ensure a comfortable experience, we offer various sedation 
+                options tailored to the patient's needs and preferences. Our experienced medical staff closely 
+                monitor patients during the procedure to ensure their safety and well-being.
+              </p>
+              <p>
+                <strong>Timely Reporting</strong>: We recognize the importance of timely reporting in gastrointestinal 
+                care. After the colonoscopy, our team analyzes the findings and prepares a comprehensive report. 
+                The report includes detailed information about any abnormalities detected, recommendations for 
+                further treatment or surveillance, and post-procedure instructions. We share the report promptly 
+                with the referring physician or specialist to facilitate coordinated and efficient patient care.
+              </p>
+              <p>
+                <strong>Collaborative Approach</strong>: Our colonoscopy department works collaboratively with other 
+                healthcare providers to ensure comprehensive patient care. We maintain open lines of communication 
+                with referring physicians and specialists, providing them with detailed colonoscopy reports and 
+                consultative services. This collaboration supports the seamless integration of colonoscopy results 
+                into the overall management and treatment plan of each patient.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our colonoscopy services are dedicated to the early detection, 
+                diagnosis, and treatment of gastrointestinal conditions. With advanced equipment, experienced 
+                gastroenterologists, and a commitment to patient comfort and safety, we strive to provide 
+                high-quality colonoscopy procedures and exceptional care. Trust us with your colonoscopy needs, 
+                and experience our commitment to excellence in gastrointestinal health.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/colonscopy.png' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/colonscopy2.png' %}" alt="Image 12">
+           
+              </div>
+           
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">ECG</button>
+            <div class="accordion-content">  
+              <p>
+                Welcome to the Electrocardiogram (ECG) Services at Yekatit 12 Hospital Medical 
+                College, where we provide comprehensive ECG testing and analysis to evaluate 
+                heart health and aid in the diagnosis and management of cardiovascular conditions. 
+                Our dedicated team of healthcare professionals, including cardiologists and 
+                specialized technicians, utilize state-of-the-art equipment to deliver accurate 
+                and timely ECG services.
+              </p>
+              <p>
+                <strong>ECG Testing</strong>: We offer a wide range of ECG tests to assess the electrical 
+                activity of the heart and detect abnormalities. An ECG records the electrical 
+                signals generated by the heart as it beats, providing valuable information 
+                about the heart's rhythm, rate, and overall cardiac health. Our ECG services 
+                include standard 12-lead ECGs, exercise stress tests, ambulatory, and event monitoring.
+              </p>
+              <p>
+                <strong>Advanced Equipment</strong>: Our ECG department is equipped with advanced ECG machines 
+                that ensure high-quality signal acquisition and accurate interpretation. 
+                These machines capture the electrical signals from the electrodes placed 
+                on the patient's chest, limbs, or special monitoring devices. The acquired 
+                data is then analyzed by our experienced team of healthcare professionals, 
+                including cardiologists, to provide accurate diagnostic information.
+              </p>
+              <p>
+                <strong>Experienced Cardiologists</strong>: Our team of experienced cardiologists 
+                specializes in the interpretation of ECG results. They possess 
+                in-depth knowledge of cardiac conditions and abnormalities, 
+                allowing them to provide accurate and comprehensive assessments 
+                of ECG findings. Their expertise ensures accurate diagnoses and 
+                appropriate treatment recommendations based on the ECG results.
+              </p>
+              <p>
+                <strong>Timely Reporting</strong>: We understand the importance of timely 
+                reporting in cardiovascular care. Our ECG department is dedicated 
+                to delivering prompt and accurate reports. After the ECG test, 
+                our team promptly analyzes the data and prepares a comprehensive 
+                report. The report is then shared with the referring physician 
+                or specialist in a timely manner, enabling them to make informed 
+                decisions about patient care.
+              </p>
+              <p>
+                <strong>Comprehensive Cardiac Assessment</strong>: ECG testing is an 
+                essential component of cardiac assessment, providing valuable information 
+                about the heart's electrical activity. It aids in the diagnosis and monitoring 
+                of various cardiovascular conditions, such as arrhythmias, ischemic heart 
+                disease, myocardial infarction, heart failure, and structural abnormalities. 
+                Our ECG services contribute to a comprehensive evaluation of cardiac health 
+                and assist in developing personalized treatment plans.
+              </p>
+              <p>
+                <strong>Patient Education</strong>: We believe in empowering patients to 
+                take an active role in their cardiac health. Our ECG department provides 
+                patient education and counseling, explaining the purpose and procedure of 
+                the ECG test, as well as discussing the significance of the results. We 
+                strive to ensure that patients have a clear understanding of their cardiac 
+                health and the importance of follow-up care.
+              </p>
+              <p>
+                <strong>Collaborative Approach</strong>: Our ECG department works collaboratively 
+                with other healthcare providers to ensure comprehensive patient care. We maintain 
+                open lines of communication with referring physicians and specialists, providing 
+                them with detailed ECG reports and consultative services. This collaboration 
+                facilitates a coordinated approach to patient management, leading to improved outcomes.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our ECG services are dedicated to assessing 
+                and monitoring cardiac health. With state-of-the-art equipment, experienced cardiologists, 
+                and a commitment to accuracy and timely reporting, we strive to provide high-quality ECG 
+                testing and analysis. Trust us with your ECG needs, and experience our commitment to 
+                excellence in cardiac care.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/ECG.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/ECG2.jpeg' %}" alt="Image 12">
+          
+             
+              </div>
+                    </div>
+          </div>
+          <!-- Repeat the accordion pattern for more accordions -->
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Echocardiography</button>
+            <div class="accordion-content">
+              <p>
+                Welcome to the Echocardiography Services at Yekatit 12 Hospital Medical College, 
+                where we provide advanced imaging techniques to evaluate the structure and function 
+                of the heart. Our dedicated team of cardiologists and skilled technicians utilize 
+                state-of-the-art equipment to deliver accurate and comprehensive echocardiography services.
+              </p>
+              <p>
+                <strong>Echocardiography</strong>: Echocardiography, also known as cardiac ultrasound, 
+                is a non-invasive imaging technique that uses high-frequency sound waves to produce 
+                detailed images of the heart. It provides valuable information about the heart's 
+                structure, function, and blood flow. Echocardiography is an essential tool in 
+                diagnosing and managing various cardiovascular conditions and plays a crucial 
+                role in the evaluation of heart diseases.
+              </p>
+              <p>
+                <strong>Advanced Equipment</strong>: Our echocardiography department is equipped with 
+                advanced ultrasound machines specifically designed for cardiac imaging. These 
+                machines utilize cutting-edge technology to capture high-resolution images of 
+                the heart in real-time. The images are then interpreted by our team of 
+                experienced cardiologists, who possess expertise in analyzing echocardiographic findings.
+              </p>
+              <p>
+                <strong>Experienced Cardiologists</strong>: Our team of experienced cardiologists 
+                specializes in echocardiography interpretation and have extensive knowledge of 
+                cardiovascular diseases. They carefully analyze echocardiographic images, 
+                interpret the findings, and provide accurate diagnoses. Their expertise 
+                ensures accurate assessments and appropriate treatment recommendations 
+                based on the echocardiography results.
+              </p>
+              <p>
+                <strong>Timely Reporting</strong>: We understand the importance of timely reporting 
+                in cardiac care. Our echocardiography department is committed to delivering prompt 
+                and accurate reports. After the echocardiogram, our team analyzes the images and 
+                prepares a comprehensive report. The report is then shared with the referring 
+                physician or specialist in a timely manner, enabling them to make informed 
+                decisions about patient care.
+              </p>
+              <p>
+                <strong>Comprehensive Cardiac Assessment</strong>: Echocardiography provides detailed 
+                information about the heart's structure and function, allowing for a comprehensive 
+                assessment of cardiac health. It aids in the diagnosis and monitoring of various 
+                cardiovascular conditions, including valve disorders, heart failure, congenital 
+                heart diseases, and cardiomyopathies. Our echocardiography services contribute 
+                to a thorough evaluation of cardiac health and assist in developing personalized 
+                treatment plans.
+              </p>
+              <p>
+                <strong>Patient Comfort and Safety</strong>: We strive to create a comfortable and safe 
+                environment for our patients during echocardiographic examinations. Our staff 
+                is trained to ensure patient comfort and provide clear instructions throughout 
+                the procedure. We adhere to strict safety protocols to minimize risks and 
+                maintain a safe environment for both patients and staff.
+              </p>
+              <p>
+                <strong>Collaborative Approach</strong>: Our echocardiography department works collaboratively 
+                with other healthcare providers to ensure comprehensive patient care. We maintain 
+                open lines of communication with referring physicians and specialists, providing 
+                them with detailed echocardiography reports and consultative services. This 
+                collaboration facilitates a coordinated approach to patient management, leading 
+                to improved outcomes.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our echocardiography services are dedicated 
+                to evaluating and monitoring cardiac health. With advanced equipment, experienced 
+                cardiologists, and a commitment to accuracy and timely reporting, we strive to 
+                provide high-quality echocardiography testing and analysis. Trust us with your 
+                echocardiography needs, and experience our commitment to excellence in cardiac care.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/Echocardiography.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/Echocardiography2.jpeg' %}" alt="Image 12">
+               
+             
+              </div>
+          
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">EEG</button>
+            <div class="accordion-content">  
+              <p>
+                Welcome to the Electroencephalography (EEG) Services at Yekatit 12 Hospital 
+                Medical College, where we specialize in the evaluation and diagnosis of neurological 
+                conditions through advanced EEG testing. Our dedicated team of neurologists and 
+                highly skilled technicians utilize state-of-the-art equipment to provide accurate 
+                and comprehensive EEG services.
+              </p>
+              <p>
+                <strong>EEG Testing</strong>: EEG is a non-invasive procedure that measures and records the 
+                electrical activity of the brain using electrodes placed on the scalp. It helps 
+                in the diagnosis and monitoring of various neurological disorders, including 
+                epilepsy, sleep disorders, brain tumors, and cognitive disorders. EEG testing 
+                provides valuable information about the brain's electrical patterns and aids 
+                in the evaluation of brain function and abnormalities.
+              </p>
+              <p>
+                <strong>Advanced Equipment</strong>: Our EEG department is equipped with advanced EEG 
+                machines that capture high-quality brainwave signals. These machines are 
+                designed to detect and record even the subtlest electrical activity of the 
+                brain. The acquired data is then analyzed by our experienced team of neurologists, 
+                who specialize in interpreting EEG findings and diagnosing neurological conditions.
+              </p>
+              <p>
+                <strong>Comprehensive EEG Services</strong>: We offer a wide range of EEG services to 
+                meet the unique needs of our patients. These include routine EEGs, ambulatory 
+                EEGs, video EEG monitoring, and sleep-deprived EEGs. These different modalities 
+                allow us to assess brain activity under various conditions, enhancing our 
+                diagnostic capabilities and providing valuable insights into neurological disorders.
+              </p>
+              <p>
+                <strong>Experienced Neurologists</strong>: Our team of experienced neurologists 
+                specializes in EEG interpretation and has extensive knowledge of neurological 
+                conditions. They carefully analyze EEG recordings, interpret the findings, and 
+                provide accurate diagnoses. Their expertise ensures precise assessments and 
+                appropriate treatment recommendations based on the EEG results.
+              </p>
+              <p>
+                <strong>Timely Reporting</strong>: We understand the importance of timely reporting in 
+                neurological care. Our EEG department is committed to delivering prompt and 
+                accurate reports. After the EEG test, our team analyzes the data and prepares 
+                a comprehensive report. The report is then shared with the referring physician 
+                or specialist in a timely manner, enabling them to make informed decisions 
+                about patient care.
+              </p>
+              <p>
+                <strong>Collaborative Approach</strong>: Our EEG department works collaboratively with 
+                other healthcare providers to ensure comprehensive patient care. We maintain 
+                open lines of communication with referring physicians and specialists, providing 
+                them with detailed EEG reports and consultative services. This collaboration 
+                facilitates a coordinated approach to patient management, leading to 
+                improved outcomes.
+              </p>
+              <p>
+                <strong>Patient Comfort and Safety</strong>: We prioritize patient comfort and safety during 
+                EEG examinations. Our staff is trained to ensure patient comfort and provide clear 
+                instructions throughout the procedure. We adhere to strict safety protocols to minimize 
+                any potential risks and maintain a safe environment for both patients and staff.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our EEG services are dedicated to evaluating 
+                and diagnosing neurological conditions. With advanced equipment, experienced neurologists, 
+                and a commitment to accuracy and timely reporting, we strive to provide high-quality EEG 
+                testing and analysis. Trust us with your EEG needs, and experience our commitment to 
+                excellence in neurological care.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/EEG.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/EEG2.jpeg' %}" alt="Image 12">
+               
+              </div>
+            
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Endoscopy</button>
+            <div class="accordion-content">
+              <p>
+                Welcome to the Endoscopy Services at Yekatit 12 Hospital Medical College, where 
+                we provide comprehensive and advanced diagnostic and therapeutic procedures for 
+                the evaluation of the gastrointestinal (GI) tract. Our team of skilled gastroenterologists 
+                and experienced technicians utilizes state-of-the-art equipment to deliver accurate and 
+                high-quality endoscopy services.
+              </p>
+              <p>
+                <strong>Endoscopy</strong>: is a minimally invasive procedure that allows for direct 
+                visualization of the GI tract using a flexible, thin tube with a camera called an endoscope. 
+                It is a versatile procedure used to diagnose and treat a wide range of GI conditions, 
+                including esophageal disorders, stomach ulcers, gastrointestinal bleeding, and inflammatory 
+                bowel disease. Endoscopy can also be utilized for therapeutic interventions such as polyp 
+                removal, tissue biopsies, and stent placement.
+              </p>
+              <p>
+                <strong>Advanced Equipment</strong>: Our endoscopy department is equipped with advanced endoscopes 
+                and supporting technologies to ensure optimal visualization and procedural success. We utilize 
+                high-definition video endoscopes and imaging systems that provide detailed and clear images of 
+                the GI tract. These technologies enhance our ability to detect abnormalities and perform precise 
+                interventions when necessary.
+              </p>
+              <p>
+                <strong>Comprehensive Endoscopy Services</strong>: We offer a comprehensive range of endoscopy services to 
+                meet the diverse needs of our patients. These include upper gastrointestinal endoscopy 
+                (esophagogastroduodenoscopy or EGD), colonoscopy, and flexible sigmoidoscopy. Our team 
+                tailors the procedure to each patient's specific requirements, ensuring personalized 
+                and effective care.
+              </p>
+              <p>
+                <strong>Experienced Gastroenterologists</strong>: Our team of experienced gastroenterologists 
+                specializes in performing endoscopic procedures and has extensive knowledge of GI conditions. 
+                They possess the expertise to interpret endoscopic findings accurately, diagnose conditions, 
+                and recommend appropriate treatment plans. Our gastroenterologists prioritize patient comfort 
+                and safety throughout the procedure, providing a compassionate and supportive environment.
+              </p>
+              <p>
+                <strong>Sedation and Comfort</strong>: We understand that undergoing an endoscopic procedure 
+                can cause anxiety or discomfort for some patients. To ensure a comfortable experience, we 
+                offer various sedation options tailored to the patient's needs and preferences. Our experienced 
+                medical staffs closely monitor patients during the procedure to ensure their safety and well-being.
+              </p>
+              <p>
+                <strong>Therapeutic Interventions</strong>: In addition to diagnostic procedures, our endoscopy 
+                services also encompass a range of therapeutic interventions like polypectomy (polyp removal and 
+                control of bleeding. Our skilled gastroenterologists are proficient in performing these procedures 
+                to provide effective treatment options for various GI conditions.
+              </p>
+              <p>
+                <strong>Timely Reporting</strong>: We recognize the importance of timely reporting in GI care. 
+                After the endoscopic procedure, our team analyzes the findings and prepares a comprehensive report. 
+                The report includes detailed information about any abnormalities detected, recommendations for 
+                further treatment or surveillance, and post-procedure instructions. We share the report promptly 
+                with the referring physician or specialist to facilitate coordinated and efficient patient care.
+              </p>
+              <p>
+                <strong>Collaborative Approach</strong>: Our endoscopy department works collaboratively with other 
+                healthcare providers to ensure comprehensive patient care. We maintain open lines of communication 
+                with referring physicians and specialists, providing them with detailed endoscopy reports and 
+                consultative services. This collaboration supports the seamless integration of endoscopy results 
+                into the overall management and treatment plan of each patient.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our endoscopy services are dedicated to the diagnosis 
+                and treatment of GI conditions. With advanced equipment, experienced gastroenterologists, and 
+                a commitment to patient comfort and safety, we strive to provide high-quality endoscopic 
+                procedures and exceptional care. Trust us with your endoscopy needs, and experience our 
+                commitment to excellence in gastrointestinal health.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/endoscopy.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/endoscopy2.jpeg' %}" alt="Image 12">
+              </div>
+            
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Pathology</button>
+            <div class="accordion-content">
+              <p>
+                Welcome to the Pathology Services at Yekatit 12 Hospital Medical College, where 
+                we provide comprehensive and accurate diagnostic services to aid in the detection, 
+                diagnosis, and management of various diseases. Our dedicated team of pathologists 
+                and laboratory professionals utilizes advanced techniques and state-of-the-art 
+                equipment to deliver high-quality pathology services.
+              </p>
+              <p>
+                <strong>Diagnostic Pathology</strong>: Diagnostic pathology plays a crucial role 
+                in the accurate identification and classification of diseases. Our experienced 
+                pathologists specialize in the examination and interpretation of tissue samples, 
+                cells, and body fluids to provide precise diagnoses. They collaborate closely 
+                with clinicians and other healthcare providers to ensure accurate and timely 
+                results that guide patient management and treatment decisions.
+              </p>
+              <p>
+                <strong>Laboratory Services</strong>: Our pathology laboratory is equipped with 
+                cutting-edge technologies and instruments to perform a wide range of laboratory 
+                tests. We offer comprehensive services in anatomical pathology, clinical pathology, 
+                and molecular pathology. These services include histopathology, cytology, hematology, 
+                microbiology, immunology, and molecular testing. Our laboratory professionals 
+                follow stringent quality control measures to ensure accurate and reliable results.
+              </p>
+              <p>
+                <strong>Anatomical Pathology</strong>: Anatomical pathology involves the examination 
+                of tissue samples obtained through biopsies, surgical resections, or autopsies. 
+                Our pathologists analyze these samples under a microscope to identify cellular and 
+                tissue abnormalities, assess disease progression, and provide essential information 
+                for making treatment decisions. We employ advanced techniques such as immunohistochemistry 
+                and molecular testing to enhance diagnostic accuracy.
+              </p>
+              <p>
+                <strong>Cytology</strong>: is the study of individual cells obtained from various body 
+                fluids or tissues. Our experienced pathologists analyze cytology samples to identify 
+                cellular abnormalities or changes that may indicate the presence of disease. Common 
+                cytology procedures include Pap smears, fine needle aspirations (FNAs), and fluid 
+                aspirations. These tests are valuable in the diagnosis of cancers, infections, 
+                inflammatory conditions, and other diseases.
+              </p>
+              <p>
+                <strong>Biopsy Analysis</strong>: Biopsy analysis involves the examination of tissue 
+                samples obtained through procedures such as surgical resections or needle biopsies. 
+                Our pathologists carefully evaluate these tissue samples under a microscope to identify 
+                abnormal cellular structures, patterns, and characteristics. Biopsy analysis is 
+                particularly useful in diagnosing and determining the stage and grade of cancers, 
+                as well as assessing the presence of other diseases or conditions
+              </p>
+              <p>
+                <strong>Molecular Pathology</strong>: Molecular pathology involves the study of 
+                genetic and molecular changes associated with diseases. Our pathology department 
+                utilizes molecular techniques, such as polymerase chain reaction (PCR).
+              </p>
+              <p>
+                <strong>Quality Assurance</strong>: We prioritize quality assurance in our pathology 
+                services to ensure accurate and reliable results. Our laboratory adheres to strict 
+                quality control measures, including proficiency testing, internal and external 
+                quality assessments, and participation in relevant accreditation programs. These 
+                practices help maintain the highest standards of accuracy, precision, and patient safety.
+              </p>
+              <p>
+                <strong>Collaborative Approach</strong>: Our pathology department works collaboratively 
+                with clinicians, surgeons, radiologists, and other healthcare providers to provide 
+                integrated and multidisciplinary care. We actively participate in clinical discussions, 
+                tumor boards, and multidisciplinary meetings to contribute our expertise and assist 
+                in treatment planning. Our collaborative approach ensures comprehensive patient care 
+                and optimized treatment outcomes.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our pathology services are dedicated to providing 
+                accurate and timely diagnostic information. With experienced pathologists, advanced 
+                laboratory technologies, and a commitment to quality assurance, we strive to deliver 
+                high-quality pathology services that contribute to effective patient management. 
+                Trust us with your diagnostic needs, and experience our commitment to excellence.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/pathology.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/pathology2.jpeg' %}" alt="Image 12">
+              
+              </div>
+                   </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Radiology</button>
+            <div class="accordion-content">  
+              <p>
+                Welcome to the Radiology Services at Yekatit 12 Hospital Medical College, where 
+                we provide cutting-edge imaging services to support diagnosis, treatment planning, 
+                and patient care. Our state-of-the-art radiology department is staffed with highly 
+                skilled radiologists and equipped with advanced imaging technologies to deliver 
+                accurate and timely results.
+              </p>
+              <p>
+                <strong>Diagnostic Imaging</strong>: We offer a comprehensive range of diagnostic imaging services 
+                to visualize and evaluate the internal structures of the body. Our department is 
+                equipped with advanced imaging modalities, including X-ray, computed tomography (CT), 
+                and ultrasound. These imaging techniques allow us to capture high-resolution images 
+                to aid in the detection, diagnosis, and monitoring of various medical conditions.
+              </p>
+              <p>
+                <strong>Advanced Imaging Technologies</strong>: We stay at the forefront of radiology technology 
+                to provide the highest quality imaging services. Our department is equipped with 
+                state-of-the-art imaging equipment, including advanced CT scanners, digital X-ray 
+                systems, and high-resolution ultrasound machines. These technologies enable us 
+                to capture detailed images with exceptional clarity and precision.
+              </p>
+              <p>
+                <strong>Experienced Radiologists</strong>: Our team of experienced radiologists specializes in 
+                diagnostic radiology. Their expertise and knowledge ensure accurate interpretation 
+                of imaging studies, providing valuable insights to referring physicians and specialists 
+                for informed decision-making.
+              </p>
+              <p>
+                <strong>Timely Reporting</strong>: We understand the importance of timely reporting in healthcare. Our 
+                radiology department is committed to delivering prompt and accurate reports. Our 
+                radiologists review and analyze the imaging studies promptly, and we strive to 
+                provide timely reports to healthcare providers, enabling them to make informed 
+                decisions in a timely manner.
+              </p>
+              <p>
+                <strong>Collaboration and Consultation</strong>: We foster a collaborative approach to patient 
+                care. Our radiologists work closely with other healthcare professionals, 
+                including referring physicians and specialists, to provide comprehensive 
+                and integrated care. We offer consultation services to discuss imaging 
+                findings, answer questions, and provide additional insights to aid in 
+                patient management.
+              </p>
+              <p>
+                <strong>Patient Comfort and Safety</strong>: We prioritize patient comfort and safety 
+                during imaging procedures. Our staff is trained to ensure a comfortable 
+                and stress-free experience for patients. We adhere to strict safety 
+                protocols to minimize radiation exposure and maintain a safe environment 
+                for both patients and staff.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our radiology services are driven 
+                by a commitment to excellence, accuracy, and patient-centered care. With 
+                advanced imaging technologies, experienced radiologists, and a 
+                multidisciplinary approach to patient care, we strive to provide 
+                high-quality imaging services for accurate diagnosis, treatment planning, 
+                and improved patient outcomes. Trust us with your radiology needs, and 
+                experience our commitment to excellence in medical imaging.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/radiology1.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/radiology2.jpeg' %}" alt="Image 12">     
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="Tab3" class="tabcontent">
+          <h3>Others</h3>
+          <!-- Accordions for Tab 3 -->
+          <!-- Add 2 accordions for Tab 3 -->
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Pharmacy</button>
+            <div class="accordion-content">
+              <p>
+                Pharmacy service is an essential component of health care delivery in hospitals. 
+                It contributes to improved treatment outcomes through ensuring availability and 
+                rational use of quality, safe and effective medicines. Provision of effective 
+                pharmacy service is also crucial for early recognition & prevention of medication 
+                errors, adverse drug events and for the prevention and containment of antimicrobial 
+                resistance. It also promotes optimal use of meager resources thereby improving quality 
+                of care resulting in better health outcomes. Accordingly, pharmacy services provide 
+                assurance that quality and safety is maintained at all stages of service provision 
+                and clients’ satisfaction is given of utmost importance. 
+              </p>
+              <ul class="list-unstyled department-service">
+                <li>
+                  <i class="icofont-check mr-2"> </i>The hospital provides quality pharmaceutical 
+                  products and effective
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Services in its outpatient, inpatient, and 
+                  emergency pharmacy service units.
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital has a functional Drug and 
+                  Therapeutics Committee (DTC) that develops and implements interventions 
+                  promoting the rational and cost-effective use of medicines
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital develops, utilizes and annually 
+                  updates a comprehensive list of pharmaceuticals prioritized by Vital essential 
+                  and nonessential (VEN).
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital ensures execution of good dispensing 
+                  practices at all dispensing outlets.
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital implements auditable, transparent 
+                  and accountable pharmaceutical transactions and services (APTS).
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital provides clinical pharmacy services
+                   at inpatient, outpatient and emergency departments.
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital provides drug information services 
+                  to health care providers, patients and the public.
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital has a functional compounding service.
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital selects, quantifies, procures, stores 
+                  and distributes safe, effective and quality pharmaceuticals consistently to ensure 
+                  uninterrupted supply.                    
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital regularly monitors medication use and safety.        
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital conducts continuous segregation, 
+                  documentation and safe disposal of pharmaceutical wastes.        
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>The hospital pharmacy monitors and evaluates 
+                  its performance on regular basis using implementation checklist and selected indicators.        
+                </li>
+              </ul>
+              <h4 class="mt-5 mb-4">Pharmacy services of the hospital is organized as</h4>
+              <ul class="list-unstyled department-service">
+                <li>
+                  <i class="icofont-check mr-2"></i>Outpatient pharmacy services case team 
+                  (OPD pharmacy, ART Pharmacy, Chronic care pharmacy)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Inpatient pharmacy services case team (OR pharmacy, 
+                  Inpatient pharmacy 1, Inpatient pharmacy 2, Oncology Pharmacy)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Emergency pharmacy case team (Adult Emergency pharmacy, 
+                  Pediatrics emergency pharmacy)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Pharmaceutical supply management case team
+                </li>
+
+                <li>
+                  <i class="icofont-check mr-2"></i>Drug information services case team (DIS)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Clinical pharmacy service case team (Internal medicine ward, 
+                  surgical ward, pediatrics ward, emergency ward)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Biomedical case team (Preventive and corrective 
+                  maintenance, specification, Medical equipment administration)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Compounding case team (Dilution, small scale 
+                  extemporaneous dermatological preparation)
+                </li>
+                <li>
+                  <i class="icofont-check mr-2"></i>Model community pharmacy case team
+                </li>
+                <li>
+              </ul>
+              <h4 class="mt-5 mb-4">Yearly performance</h4>
+              <p>
+                The pharmacy delivers dispensing and counselling service for about 
+                123085 at OPD Pharmacy, 137138 at Emergency pharmacy, 328958 at all 
+                inpatient pharmacy outlets annually. On average the pharmacy gives 
+                dispensing and counselling service for about 589181clients.
+              </p>
+
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/pharmacy.jpeg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/pharmacy2.jpeg' %}" alt="Image 11">
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the accordion pattern for more accordions -->
+          <div class="accordion">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">Biomedical</button>
+            <div class="accordion-content">
+              <p>
+                Welcome to the Biomedical Department at Yekatit 12 Hospital Medical College, where 
+                we prioritize the integration of cutting-edge technology and biomedical expertise 
+                to support the delivery of high-quality healthcare services. Our dedicated team 
+                of biomedical engineers and technicians work diligently to ensure the optimal 
+                functioning, safety, and efficiency of medical equipment and technology within 
+                the hospital.
+              </p>
+              <p>
+                <strong>Medical Equipment Management</strong>: We are responsible for the management, 
+                maintenance, and calibration of a wide range of medical equipment used throughout 
+                the hospital. Our biomedical engineers and technicians perform routine inspections, 
+                preventive maintenance, and repairs to ensure that all equipment is functioning 
+                properly and meets quality standards. We follow strict regulatory guidelines and 
+                manufacturer recommendations to guarantee the safety and reliability of medical devices.
+              </p>
+              <p>
+                <strong>Equipment Procurement and Evaluation</strong>: We collaborate with clinicians, 
+                administrators, and procurement teams to assess the hospital's equipment needs and make 
+                informed decisions regarding equipment procurement. Our biomedical experts evaluate new 
+                technologies and equipment options, considering factors such as performance, safety, 
+                and cost-effectiveness. We strive to ensure that the hospital has access to state-of-the-art 
+                medical devices that enhance patient care and outcomes.
+              </p>
+              <p>
+                <strong>Technology Integration and Training</strong>: We play a crucial role in the 
+                integration of new technologies into the hospital's infrastructure. Our team works closely 
+                with various departments to ensure the seamless integration and functioning of medical 
+                equipment and systems. We provide training and support to healthcare professionals, 
+                empowering them to effectively operate and utilize the technology in their daily 
+                clinical practice.
+              </p>
+              <p>
+                <strong>Equipment Safety and Compliance</strong>: Patient safety is our utmost priority. 
+                We adhere to strict safety protocols and conduct regular safety inspections to identify 
+                and mitigate potential risks associated with medical equipment. Our biomedical team 
+                stays updated on the latest regulatory standards and guidelines to ensure compliance 
+                with local and international regulations, including equipment sterilization, electrical 
+                safety, and radiation protection.
+              </p>
+              <p>
+                <strong>Emergency Response and Troubleshooting</strong>: In critical situations, our 
+                biomedical experts are readily available to provide emergency response and troubleshooting 
+                services. We understand the importance of swift action to resolve equipment failures or 
+                malfunctions, minimizing disruption to patient care. Our team is trained to handle 
+                emergency situations, promptly diagnose issues, and implement necessary repairs or 
+                replacements to restore equipment functionality.
+              </p>
+              <p>
+                <strong>Collaboration and Consultation</strong>: We maintain a collaborative approach, 
+                working closely with clinical staff, physicians, and other healthcare professionals. 
+                We actively participate in interdisciplinary teams, providing consultation on equipment 
+                selection, utilization, and maintenance. Our expertise contributes to the overall efficiency 
+                and effectiveness of healthcare delivery within the hospital.
+              </p>
+              <p>
+                At Yekatit 12 Hospital Medical College, our Biomedical Department is committed to ensuring 
+                the safe and efficient functioning of medical equipment, integrating cutting-edge technology, 
+                and supporting the delivery of high-quality healthcare services. Through rigorous maintenance, 
+                safety protocols, and collaboration with healthcare professionals, we strive to enhance patient 
+                care and contribute to the success of our institution.
+              </p>
+              <div class="accordion-img-grid">
+                <img src="{% static 'images/clinical-service/biomedical.jpg' %}" alt="Image 11">
+                <img src="{% static 'images/clinical-service/biomedical2.jpg' %}" alt="Image 12">
+              </div>
+            </div>
+          </div>
+          <!-- Add more accordions -->
+          <!-- You can continue this pattern for more accordions -->
+        </div>
+        
+        <!-- Add more divs for additional tabs -->
+        <!-- You can continue this pattern for more tabs -->
+       
+       
+        
+        
+        <script>
+          // Function to switch between tabs
+          function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+        
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+        
+            // Deactivate all tab links
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+        
+            // Show the selected tab content and activate the button
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+        
+          // Function to close all accordion contents
+          function closeAllAccordionContents() {
+            var accordions = document.getElementsByClassName("accordion-content");
+            for (var i = 0; i < accordions.length; i++) {
+              accordions[i].style.display = "none";
+            }
+          }
+        
+          // Activate the default tab and close all accordion contents when the page loads
+          window.onload = function () {
+            document.getElementsByClassName("tablinks")[0].click();
+            closeAllAccordionContents();
+          };
+        
+          // Function to toggle accordion content
+          function toggleAccordion(btn) {
+            var content = btn.nextElementSibling;
+            var isActive = content.style.display === "grid";
+        
+            // Hide all accordion contents
+            closeAllAccordionContents();
+        
+            // Remove active class from all accordion buttons
+            var accordionBtns = document.getElementsByClassName("accordion-btn");
+            for (var j = 0; j < accordionBtns.length; j++) {
+              accordionBtns[j].classList.remove("active");
+            }
+        
+            // Toggle display and active class for the clicked accordion
+            if (!isActive) {
+              content.style.display = "grid";
+              btn.classList.add("active");
+            }
+          }
+        </script>
+        
+
+
+    
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+       <script src="{% static 'script.js' %}"></script>
+      <!-- Initialize Swiper -->
+    
+      
+    </div>
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.js"></script>
+    <!-- Bootstrap 4.3.2 -->
+    <script src="plugins/bootstrap/js/popper.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/counterup/jquery.easing.js"></script>
+    <!-- Slick Slider -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+
+    <script src="plugins/shuffle/shuffle.min.js"></script>
+    <script src="plugins/counterup/jquery.counterup.min.js"></script>
+    <!-- Google Map -->
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script>
+      function searchContent() {
+        // Get search input and convert to lowercase for case-insensitive search
+        const searchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+
+        // Reset previous highlights
+        const highlights = document.querySelectorAll(".highlight");
+        highlights.forEach((highlight) => {
+          highlight.classList.remove("highlight");
+        });
+
+        if (searchTerm.trim() !== "") {
+          // Search for the term in paragraphs and headers
+          const elementsToSearch = document.querySelectorAll(
+            ".content p, .content h2"
+          );
+          let contentFound = false;
+
+          elementsToSearch.forEach((element) => {
+            const elementText = element.textContent.toLowerCase();
+            const index = elementText.indexOf(searchTerm);
+
+            if (index !== -1) {
+              // Highlight the found term
+              const highlightedText = elementText.substring(
+                index,
+                index + searchTerm.length
+              );
+              const newText = element.innerHTML.replace(
+                new RegExp(highlightedText, "i"),
+                `<span class="highlight">${highlightedText}</span>`
+              );
+
+              element.innerHTML = newText;
+              contentFound = true;
+            }
+          });
+
+          // Display message if content is not found
+          if (!contentFound) {
+            // Clear the input and update the placeholder text with the no results message
+            document.getElementById("searchInput").value = "";
+            document.getElementById("searchInput").placeholder =
+              "No results found.";
+          }
+        }
+      }
+    </script>
+    <br><br><br>
+{% endblock content %}

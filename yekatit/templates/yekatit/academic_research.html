@@ -1,0 +1,250 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+<link rel="stylesheet" href="{% static 'css/department.css' %}" />
+<link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+
+    <section class="page-title bg-1 custom-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <h1 class="text-capitalize mb-5 text-lg">Research and Publication</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% for department in content_list %}
+        {% if department.title ==  'Publications' %}
+            <section class="section department-single">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Publications office of Yekatit 12 Hospital Medical College. Discover a diverse range of publications showcasing the academic and research endeavors of our faculty, students, and researchers.                
+                    </p>
+                    <p> 
+                        Explore research papers, specialized journals, conference proceedings, student publications, books and book chapters, and collaborative research. Stay informed, gain insights, and contribute to the advancement of medical knowledge and healthcare practices.                
+                    </p>
+                    <p>
+                        Contact the Publications Office for inquiries or assistance. Embark on a journey of discovery and learning in the world of medical research and academics.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='research-and-publication-department' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Research and Publication<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/research/publications.webp' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    
+                </div>
+                </div>
+            </div>
+            </section>
+        
+        {% endif %}
+
+        {% if department.title ==  'Research Projects' %}
+            <section class="section department-single">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Research Projects office of Yekatit 12 Hospital Medical College. Explore our ongoing research initiatives in various fields such as clinical research, basic sciences, public health, and medical technology. Engage with collaborative research projects conducted in partnership with local and international institutions. Access research publications authored by our faculty and researchers, and stay informed about the latest developments in medical research.                
+                    </p>
+                    <p> 
+                        Learn about research grants and funding opportunities, as well as our commitment to ethical research practices and compliance. Contact our Research Office for inquiries and assistance.
+                    </p>
+                    <p>
+                        Join us on a journey of discovery and innovation to advance medical knowledge and enhance healthcare outcomes.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='research-and-publication-department' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Research and Publication<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/research/research-project.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </section>
+        
+        {% endif %}
+
+        {% if department.title ==  'Research policy and guideline' %}
+            <section class="section department-single">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Yekatit 12 Hospital Medical College's research policy and guidelines ensure responsible and ethical research practices. We prioritize ethical conduct, research integrity, compliance with regulations, collaborative research, research funding, publication dissemination, intellectual property rights, research training, and education, as well as research governance.
+                    </p>
+                    <p> 
+                        Adhering to these guidelines enables us to contribute to the advancement of medical knowledge and healthcare practices. For more information, please reach out to our Research Office.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='research-and-publication-department' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Research and Publication<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/research/research-policy-guidelines.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    
+                </div>
+                </div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Research center' %}
+            <section class="section department-single">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Yekatit 12 Hospital Medical College hosts specialized research centers dedicated to clinical research, public health research, biomedical sciences, medical technology innovation, health services research, and global health research.                
+                    </p>
+                    <p> 
+                        These centers foster collaboration, innovation, and the translation of research findings into practical applications. They address specific healthcare challenges, improve patient care, and contribute to the advancement of medical knowledge. Researchers, students, and healthcare professionals actively engage with these centers to drive research excellence and enhance healthcare outcomes.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='research-and-publication-department' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Research and Publication<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/research/research-center.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                    
+                </div>
+                </div>
+            </div>
+            </section>
+           
+        {% endif %}
+
+        {% if department.title ==  'Technology Transfer' %}
+            <section class="section department-single">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Yekatit 12 Hospital Medical College Technology transfer is the process of transferring knowledge, innovations, or technologies from research institutions to commercial entities for practical application. It involves protecting intellectual property, licensing agreements, creating spin-off companies, collaborating with industry, utilizing incubators and innovation hubs, exchanging knowledge and providing training, and generating economic and social impact.                
+                    </p>
+                    <p> 
+                        Technology transfer bridges the gap between research and practical implementation, benefiting society, driving economic growth, and improving quality of life.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='research-and-publication-department' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Research and Publication<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/research/technology transfer.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+                   
+                </div>
+                </div>
+            </div>
+            </section>
+            
+        {% endif %}
+
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+      <script src="plugins/jquery/jquery.js"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="plugins/bootstrap/js/popper.js"></script>
+      <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="plugins/counterup/jquery.easing.js"></script>
+      <!-- Slick Slider -->
+      <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+      <!-- Counterup -->
+      <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+  
+      <script src="plugins/shuffle/shuffle.min.js"></script>
+      <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

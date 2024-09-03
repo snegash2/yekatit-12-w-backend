@@ -1,0 +1,69 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/moreservices.css' %}" />
+
+
+    <section class="page-title bg-1">
+		<div class="overlay"></div>
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12">
+			  <div class="block text-center">
+                <span class="text-white">Yekatit-12 Hospital Medical College</span>
+                <h1 class="text-capitalize mb-5 text-lg">Events</h1>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+    <section >
+        <div class="MServices-header">
+          <!-- <h1 id="chooseServicesHeader">Select <span>a RESEARCH</span></h1> -->
+        </div>
+      </section>
+      <section class="More-services">
+        <div class="Mainservices-container">
+          <div class="server-grid" id="serverGrid"></div>
+          <div class="services-container" id="servicesContainer"></div>
+        </div>
+      </section>
+      <script>
+        var staticFilePath = "{% static 'assets/images/bordclicnic-removebg-preview.png' %}"
+        var staticImg = "{% static 'images/gallery/100years/100yrs anniversary.png' %}"
+        var staticImg2 = "{% static 'images/gallery/100years/100yrs3.jpg' %}"
+    </script>
+    <script src="{% static 'js/events.js' %}"></script>
+
+
+        <!-- Add Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="{% static 'script.js' %}"></script>
+
+
+          <!-- ==================================================================== -->
+      <script src="{% static 'plugins/jquery/jquery.js' %}"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="{% static 'plugins/bootstrap/js/popper.js' %}"></script>
+      <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'plugins/counterup/jquery.easing.js' %}"></script>
+      <!-- Slick Slider -->
+      <script src="{% static 'plugins/slick-carousel/slick/slick.min.js' %}"></script>
+      <!-- Counterup -->
+      <script src="{% static 'plugins/counterup/jquery.waypoints.min.js' %}"></script>
+  
+      <script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+      <script src="{% static 'plugins/counterup/jquery.counterup.min.js' %}"></script>
+
+      
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+
+{% endblock content %}

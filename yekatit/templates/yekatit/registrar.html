@@ -1,0 +1,302 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+
+    <section class="page-title bg-1 custom-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <h1 class="text-capitalize mb-5 text-lg">Registrar</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% for department in content_list %}
+        {% if department.title ==  'Registrar Office' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        The Registrar's Office at Yekatit 12 Hospital Medical College is responsible for student records, course registration, academic calendars, degree audits, transcripts, graduation, academic policies, and student support services. We are dedicated to providing efficient and responsive assistance to ensure a smooth academic journey for students, faculty, and staff. Contact us or visit our office for any inquiries or support needed.                </p>
+                    <h3 class="mt-5 mb-4">Summary of registrar activities</h3>
+                    <div class="divider my-4"></div>
+                    <ul class="list-unstyled department-service">
+                      <li>
+                        <i class="icofont-check mr-2"></i>Ascertain the preparation of the academic calendar of the college each year by the registrar and submit to the Senate for approval.
+                      </li>
+                      <li>
+                        <i class="icofont-check mr-2"></i>Ensure that pertinent laws, senate legislation and directives on students (admission, registration, graduation) and curriculum (modules, credit requirements, etc.) are equitably observed.
+                      </li>
+                      <li>
+                        <i class="icofont-check mr-2"></i>Ensure and maintain up-to-date and accurate information on student admission, placement, registration, academic performance, retention, attrition, and graduation based on types of programs.
+                      </li>
+    
+                      <li>
+                        <i class="icofont-check mr-2"></i>Support, coordinate and oversee the registrar and student service units of the college.
+                      </li>
+                    </ul>    
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='registrar' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Registrar<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/registrar/registrar-office.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+
+    
+                </div>
+                </div>
+            </div>
+            </section>
+       
+        {% endif %}
+
+        {% if department.title ==  'Student Statics' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+
+                    <p>
+                        Welcome to the Reproductive Health Master’s Program at Yekatit 12 Hospital Medical College. Our program equips students with a comprehensive understanding of reproductive health and the skills to address related challenges.
+                    </p>
+                    <p> 
+                        With a specialized curriculum covering various topics, practical fieldwork experience, and opportunities for research, our interdisciplinary program prepares students for diverse careers in reproductive health. Graduates find employment in clinics, research institutions, non-profit organizations, government agencies, and international organizations, in roles such as specialists, program managers, researchers, policy analysts, and educators.
+                    </p>
+                    <p>
+                        Join us to make a positive impact in the field of reproductive health. Explore our website for more information on the program, faculty, admission requirements, and exciting opportunities that awaits you.
+                    </p>
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='registrar' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Registrar<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="department-img">
+                    <img src="{% static 'images/academics/masters/reproductive-health.jpeg' %}" alt="" class="img-fluid" />
+                    </div>
+                </div>
+                </div>
+             
+                    
+                </div>
+                </div>
+            </div>
+            </section>
+            
+        {% endif %}
+
+        {% if department.title ==  'Academic Calendar' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-8">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        The academic calendar for Yekatit 12 Hospital Medical College outlines important dates and events throughout the academic year. The academic calendar snippet is as below and you can also find the same by going to the <a class=clickable_link href="http://y12hmc.edu.et/pages/academic_calender">SIS calendar page</a> and filter the Academic Year, Semester, and program.
+                    </p>
+                    <img src="{% static 'images/academics/registrar/calendar/calendar.png' %}" alt="" class="img-cstm" />
+
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='registrar' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        >Registrar<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="department-img">
+                                <img src="{% static 'images/academics/registrar/AcademicCalendar.jpeg' %}" alt="" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    </div>
+                </div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Admission' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-12">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Follow the online application steps outlined below:
+                    </p>
+                    <ol>
+                        <li>Prepare your all educational documents in single
+                            PDF file and the application fee receipt in separate
+                            PDF
+                        </li>
+                        <li>
+                            Use the website and click the SIS portal
+                        </li>
+                        <li>
+                            Go to and click “online admission”
+                        </li>
+                        <li>
+                            Complete all the required fields
+                        </li>
+                        <li>
+                            Attached (PDF only) your educational document and receipt on the respective space provided
+                        </li>
+                        <li>
+                            Submit the application and you get message with a registration number/ tracking number/.
+                        </li>
+                        <li>
+                            Please keep your registration number and check your application status on “Online admission tracking”
+                        </li>
+                        <li>
+                            You can summit any missed document on “online admission tracking”
+                        </li>
+                        <li>
+                            Note that while you resubmit any missed document, please combine with the first documents (already submitted) and reattach in a single PDF file.
+                        </li>
+                    </ol>
+                    <p>You can go to the <a class=clickable_link href="http://y12hmc.edu.et/pages/admission">SIS page to register for admission</a></p>
+                    <!-- <h3 class="mt-5 mb-4">Academic Calendar from SIS portal</h3>
+                    <div class="divider my-4"></div> -->
+                    <img src="{% static 'images/academics/registrar/admission/admission1.png' %}" alt="" class="img-cstm" />
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='registrar' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        > Registrar<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Alumni' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-12">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        Welcome to the Alumni service of Yekatit 12 Hospital Medical College. We celebrate your achievements and provide resources to support your personal and professional growth. Benefit from lifelong networking, career development opportunities, continuing education programs, and exclusive alumni events, and access to college updates.                 
+                    </p>
+                    <p>
+                        Join our vibrant Alumni Association and contribute to the college's mission. Stay connected, make a difference, and shape the future of healthcare. 
+                    </p>
+                    <p>
+                        Contact the Alumni Office for any inquiries or suggestions. Here is the platform for <a class=clickable_link href="http://y12hmc.edu.et/alumni/member_registration">alumni registration in our SIS portal</a>:
+                    </p>
+                    <img src="{% static 'images/academics/registrar/alumni/alumni.png' %}" alt="" class="img-cstm" />
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='registrar' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        > Registrar<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </section>
+        {% endif %}
+
+        {% if department.title ==  'Academic Announcement' %}
+            <section class="section department-single">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-12">
+                    <div  class="department-content mt-5">
+                    <h2 class="mt-5 mb-4">{{ department.title }}</h2>
+                    <div class="divider my-4"></div>
+                    <p>
+                        This page is under construction until announcement becomes available from registrar office.
+                    </p>
+                    <br><br>
+                    <a
+                        href="{% url 'page_view' page_slug='registrar' %}"
+                        class="btn btn-main-2 btn-round-full"
+                        > Registrar<i class="icofont-simple-right ml-2"></i
+                    ></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+        {% endif %}
+
+    {%endfor %}
+
+      <!-- ==================================================================== -->
+      <script src="plugins/jquery/jquery.js"></script>
+      <!-- Bootstrap 4.3.2 -->
+      <script src="plugins/bootstrap/js/popper.js"></script>
+      <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="plugins/counterup/jquery.easing.js"></script>
+      <!-- Slick Slider -->
+      <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+      <!-- Counterup -->
+      <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+  
+      <script src="plugins/shuffle/shuffle.min.js"></script>
+      <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+      <!-- Add Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'js/swiper.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+{% endblock content %}

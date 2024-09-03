@@ -1,0 +1,160 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/news.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/doctors-swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact-custom.css' %}" />
+    <script src="{% static 'js/form-validation.js' %}" defer></script>
+    <script src="{% static 'js/contact-form.js' %}" defer></script>
+
+    <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block text-center">
+                <span class="text-white">Contact Us</span>
+                <h1 class="text-capitalize mb-5 text-lg">Get In Touch</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+     
+    <!-- contact form start -->
+
+    <section class="section contact-info pb-0">
+        <div class="container">
+             <div class="row">
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="contact-block mb-4 mb-lg-0">
+                        <i class="icofont-live-support"></i>
+                        <h5>Call Us</h5>
+                        +251984029014
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                  <div class="contact-block mb-4 mb-lg-0">
+                      <i class="icofont-support-faq"></i>
+                      <h5>Email Us</h5>
+                      <a href="mailto:admin@y12hmc.edu.et">admin@y12hmc.edu.et</a>
+                  </div>
+              </div>
+              
+                <div  class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="contact-block mb-4 mb-lg-0">
+                        <i class="icofont-location-pin"></i>
+                        <a href="#maps"> 
+                        <h5>Location</h5>
+               Sidist Kilo, Addis Ababa, Ethiopia </a> 
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-form-wrap section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center">
+                        <h2 class="text-md mb-2">Contact Us</h2>
+                        <div class="divider mx-auto my-4"></div>
+                        <p class="mb-5">Find contact details including the main postal
+                           address and Phone number  
+                           You can also view our social media</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <!-- {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %} -->
+                    
+                    <form method="post" action="{% url 'contact' %}" id="contact-form">
+       
+                    <!-- <form method="post" novalidate> -->
+                        <div class="row">
+                            {% csrf_token %}
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form.name }}
+                                    {{ form.name.errors }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form.email }}
+                                    {{ form.email.errors }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form.phone }}
+                                    {{ form.phone.errors }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form.subject }}
+                                    {{ form.subject.errors }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-2 mb-4">
+                            <!-- <textarea name="message" id="message" class="form-control" rows="8" placeholder="Your Message">{{ form.message }}</textarea> -->
+                            {{ form.message }}
+                            {{ form.message.errors }}
+                        </div>
+                    
+                        <div class="text-center">
+                            <button type="submit" id="submit-button">Send Message</button>
+                        </div> 
+                    </form>
+                    <br>
+                    <div id="success-message" class="alert" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="maps"  class="google-map ">
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.0554150480956!2d38.75940286949302!3d9.043534523872854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f687e1885a9%3A0x3e1411cf6ec40496!2zWWVrYXRpdCAxMiBIb3NwaXRhbCB8IDYgS2lsbyB8IOGLqOGKq-GJsuGJtSAxMiDhiIbhiLXhjZLhibPhiI0gfCA2IOGKquGIjg!5e0!3m2!1sen!2set!4v1714678267182!5m2!1sen!2set" width="1350"
+             height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+      <!-- motto -->
+      <section class="contact-motto">
+        <div class="Motto-con">
+          <h1><i class="fas fa-quote-left">
+      
+          </i> Your health is our priority.<span style="color: green;"> Contact Us</span>  today for compassionate care and expert medical services.
+           <i class="fas fa-quote-right"></i></h1>
+      </div>
+      </section>
+
+
+  <!-- Add Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="{% static 'script.js' %}"></script>
+  <script src="{% static 'js/swiper.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/contact.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  
+
+<!-- /portfolio -->
+
+{% endblock content %}

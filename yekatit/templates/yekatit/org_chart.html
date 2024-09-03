@@ -1,0 +1,64 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/department.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <section class="page-title bg-1">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block text-center">
+              <h1 class="text-capitalize mb-5 text-lg">Yekatit-12 Hospital Medical College</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- =============== -->
+<div id="Misson-section" class="section-title text-center">
+<h2 class="mb-4">College organogram within our hospital</h2>
+<div class="divider mx-auto my-4"></div>
+</div>
+<div class="grid-container">
+    <img src="{% static 'images/about/org-chart/college-org.png' %}" alt="Mission Icon">
+</div>
+
+<div id="Misson-section" class="section-title text-center">
+  <h2 class="mb-4">School of medicine organogram within our hospital</h2>
+  <div class="divider mx-auto my-4"></div>
+  </div>
+  <div class="grid-container">
+      <img src="{% static 'images/about/org-chart/school-of-medicine-organogram.png' %}" alt="Mission Icon">
+  </div>
+
+<!-- Values -->
+
+
+
+
+  <!-- motto -->
+<section class="second">
+  <div  class="Motto-con">
+    <h4><i class="fas fa-quote-left">
+
+    </i class="para"> Yekatit 12 Hospital Medical College provides 
+    comprehensive and high-quality healthcare services 
+    in outpatient, inpatient, emergency, ICU,
+    and operations, ensuring holistic care for the population.
+     <i class="fas fa-quote-right"></i></h4>
+</div>
+</section>
+
+  <!-- Add Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="{% static 'script.js' %}"></script>
+<!-- /portfolio -->
+
+{% endblock content %}

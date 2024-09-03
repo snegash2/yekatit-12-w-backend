@@ -1,0 +1,159 @@
+#logo-img {
+  width: 6rem;
+}
+#Header {
+  color: white;
+}
+#sub-content {
+  color: rgb(235, 233, 233);
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Dark overlay color with 50% opacity */
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+  height: 580px; /* Set your desired height */
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white; /* Adjust text color for better contrast */
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #4c952d;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: #4c952d;
+}
+@media (max-width: 780px) {
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    color: #4c952d;
+    margin-top: 50rem;
+    margin-left: -22px;
+    display: none;
+  }
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    color: #4c952d;
+    margin-top: 50rem;
+    margin-left: -22px;
+    display: none;
+  }
+  #sub-content {
+    margin-left: 19px;
+  }
+  .feature-item.mb-5.mb-lg-0 {
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 780px) {
+  #logo-img {
+    width: 5rem;
+  }
+  #mtitle {
+    color: #223a66;
+    font-size: 20px;
+    margin-left: -74px;
+    line-height: 26px;
+  }
+}
+.divider {
+  margin-top: 6rem;
+}
+
+/* .navbar-toggler {
+  font-size: 1.5rem;
+} */
+
+/* Optional: Add styling for the sticky header when it's not at the top */
+.header-top-bar.sticky {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+}
+.Services-header {
+  text-align: center;
+  margin-top: 5rem;
+}
+.about {
+  margin-top: -3rem;
+}
+#contact-btn {
+  background-color: #4c952d;
+  margin-left: 0rem;
+}
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the color and opacity as needed */
+}
+/* Custom styles for the header */
+#Header {
+  color: white; /* Green color */
+  font-size: 36px; /* Adjust the font size as needed */
+  text-align: left; /* Center the text */
+  font-weight: bold; /* Make the text bold */
+}
+
+#Header span {
+  font-size: 25px; /* Larger font size for the first letter */
+  font-weight: bold; /* Make the first letter bold */
+}
+
+#swiper-slide video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.main-video-banner::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main-span {
+  color: green;
+}

@@ -1,0 +1,434 @@
+.About-video {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  min-width: 44%;
+  min-height: 100%;
+  /* margin-left: 20rem; */
+}
+#Vision-container {
+  margin-top: -6rem;
+}
+.motto-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 0;
+}
+
+/* .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  } */
+.motto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: -6rem;
+}
+
+.motto-container img {
+  max-width: 200px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.Motto-con {
+  text-align: center;
+  padding: 1rem;
+  background-color: #83898314;
+  padding-top: 79px;
+  padding-bottom: 1px;
+}
+.Motto-con section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.Motto-con h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 7rem;
+}
+
+.Motto-con i {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.motto-container p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-left: 5px;
+}
+.motto-container .fas {
+  padding-inline: 7px;
+}
+.award-img li {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.award-img li i {
+  margin-right: 10px;
+  color: green; /* Change the color to match your design */
+}
+#Value {
+  margin-top: -10rem;
+}
+section.section.testimonial {
+  margin-top: -8rem;
+}
+.provost {
+  float: left;
+  margin: 15px;
+}
+.provost img {
+  width: 366px;
+  height: 350px;
+  border-radius: 21px;
+  margin-left: -3rem;
+}
+.custom-provost-message {
+  margin: 35px;
+}
+/*  */
+.Message-container {
+  display: grid;
+  grid-template-columns: 39% 50%;
+  gap: 5%;
+  padding: 5rem;
+  margin-top: -7rem;
+  margin-left: -3rem;
+}
+.Message-container .second {
+  margin-top: 3rem;
+}
+.About-video-container {
+  display: grid;
+  grid-template-columns: 40% 50%;
+}
+@media (max-width: 576px) and (max-width: 768px) {
+  #Vision-container {
+    margin-top: -13rem;
+  }
+  .Message-container {
+    grid-template-columns: 100%;
+    gap: 0%;
+    margin-top: -5rem;
+    padding: 2rem;
+  }
+  .provost img {
+    width: 336px;
+    height: auto;
+    border-radius: 21px;
+    margin-left: -1rem;
+  }
+  .Message-container .second {
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+  #Value .row {
+    margin-top: -5rem;
+  }
+}
+/* Use flexbox to reorder elements */
+@media (max-width: 767px) {
+  .section.testimonial .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial {
+    margin-top: -25rem;
+  }
+  .section.testimonial .container .row {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    margin-top: 8rem;
+  }
+
+  .section.testimonial .container .row .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 100%;
+  }
+
+  .section.testimonial .container .row .testimonial-wrap {
+    margin-left: 0;
+    flex: 0 0 100%;
+  }
+  .About-video {
+    position: absolute;
+    top: 25%;
+    left: -22%;
+    transform: translate(-50%, -50%);
+    min-width: 94%;
+    min-height: 100%;
+    /* margin-left: 20rem; */
+  }
+}
+
+/* Optional: Add padding to the video for better spacing */
+.About-video {
+  padding-bottom: 20px;
+}
+img.img-fluid.w-100 {
+  height: 16rem;
+}
+
+/*  */
+.service-block {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.service-block:hover {
+  transform: scale(1.05); /* Scale the element by 5% on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-color: green; /* Change the border color on hover */
+}
+/*  */
+/* .image-container {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+.About-Mission {
+  margin-top: 8rem;
+  margin-bottom: 9rem;
+}
+#Misson-section {
+  margin-top: 12rem;
+  position: relative;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default to a single column */
+  gap: 30px;
+  margin: 70px auto;
+  max-width: 1000px;
+}
+
+.message h2.mb-4 {
+  text-align: center;
+  color: #223a66;
+  margin-top: -2rem;
+}
+.about-para p {
+  padding-left: 4rem;
+  padding-right: 26px;
+  margin-top: -6rem;
+}
+.second .Motto-con h4 {
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 columns on even larger screens */
+  }
+}
+
+.grid-item {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #223a66;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle-icon {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: -40px auto 0 auto;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  border: 2px solid green;
+}
+
+.circle-icon img {
+  width: 80%;
+  height: auto;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* cool hover effect */
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* lift up effect */
+.About-Mission .grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.About-Mission .grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.About-Mission .grid-item:hover::before {
+  opacity: 1;
+}
+/*  */
+
+.expandable-text {
+  margin: 20px auto;
+}
+
+.expandable-text .content {
+  overflow: hidden;
+  max-height: 214px; /* Adjust the height as needed */
+  transition: max-height 0.3s ease;
+}
+
+.expandable-text .full-text {
+  display: none;
+}
+
+.expandable-text.expanded .content {
+  max-height: none;
+  text-align: justify;
+  margin-left: -5rem;
+  margin-right: -4rem;
+}
+
+/* .expandable-text.expanded .full-text {
+  display: block;
+} */
+.expandable-text.expanded .full-text {
+  display: block;
+  max-width: 95rem;
+  margin-left: -33rem;
+  margin-right: -5rem;
+  margin-top: 70px;
+  text-align: justify;
+}
+.expandable-text .read-mores {
+  cursor: pointer;
+  color: green;
+  text-decoration: none;
+  display: block;
+  margin-top: -24px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .expandable-text {
+    padding: 10px;
+  }
+  .About-Mission .grid-container {
+    max-width: 21rem;
+    margin-top: 11rem;
+  }
+  /* section.section.testimonial {
+    margin-top: -27rem;
+  } */
+  .expandable-text.expanded .full-text {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .message h2.mb-4 {
+    margin-top: -5rem;
+  }
+  .Motto-con h1 {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  .section-title {
+    margin-bottom: -81px;
+  }
+  .section-title h2 {
+    color: #223a66;
+    margin-top: 7rem;
+  }
+  h2#leader {
+    margin-top: 0rem;
+  }
+  .second .Motto-con h4 {
+    margin-bottom: 4rem;
+    font-size: 16px;
+  }
+  .second .Motto-con {
+    margin-top: -8rem;
+  }
+  .expandable-text.expanded .content {
+    margin-left: 0.3rem;
+    margin-right: 0rem;
+  }
+}
+
+.testimonial-block p {
+  text-align: justify;
+  font-size: 16px;
+}
