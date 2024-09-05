@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.contrib import messages
@@ -134,9 +135,21 @@ def content_view(request):
 
 def announcement(request):
     content_list = Page.objects.all()
-    all_announcement = Announcement.objects.all().order_by('-published_date')
+    all_announcement = Announcement.objects.all().order_by('-published_date', '-created_at')
+
+    # Pagination
+    paginator = Paginator(all_announcement, 3)  # Show 5 announcements per page
+    page = request.GET.get('page')
+    
+    try:
+        paginated_announcements = paginator.page(page)
+    except PageNotAnInteger:
+        paginated_announcements = paginator.page(1)
+    except EmptyPage:
+        paginated_announcements = paginator.page(paginator.num_pages)
+
     context = {
-        'announcement_items': all_announcement,
+        'announcement_items': paginated_announcements,
         'content_list': content_list
     }
     return render(request, 'yekatit/announcement_overview.html', context)
@@ -155,7 +168,7 @@ def announcement_detail(request, announcement_slug):
 
 def news(request):
     content_list = Page.objects.all()
-    all_news = NewsOverview.objects.all().order_by('-published_date')
+    all_news = NewsOverview.objects.all().order_by('-published_date', '-created_at')
     context = {
         'news_items': all_news,
         'content_list': content_list

@@ -109,6 +109,7 @@ class NewsOverview(models.Model):
     image = models.ImageField(upload_to='news_images/', default='default_images/default.png')
     page = models.ForeignKey(Page, on_delete=models.CASCADE, related_name='newsoverview')
     published_date = models.DateField(default='2000-01-01')
+    created_at = models.DateTimeField(auto_now_add=True)  # Add this field to track the creation time
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=False, default='')
 
     def save(self, *args, **kwargs):
@@ -184,6 +185,7 @@ class Announcement(models.Model):
     image = models.ImageField(upload_to='announcement_images/', default='default_images/default.png')
     page = models.ForeignKey(Page, on_delete=models.CASCADE, related_name='announcement')
     published_date = models.DateField(default='2024-01-01')
+    created_at = models.DateTimeField(auto_now_add=True)  # Add this field to track the creation time
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=False, default='')
 
     def save(self, *args, **kwargs):
